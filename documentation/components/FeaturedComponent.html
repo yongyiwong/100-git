@@ -1,0 +1,1065 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>100bet documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">100bet documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FeaturedComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/frontend/src/app/modules/home/featured/featured.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>workspace-featured</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./featured.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./featured.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cartFromLocalStorage">cartFromLocalStorage</a>
+                            </li>
+                            <li>
+                                <a href="#featuredArray">featuredArray</a>
+                            </li>
+                            <li>
+                                <a href="#featuredArrayLenght">featuredArrayLenght</a>
+                            </li>
+                            <li>
+                                <a href="#featuredCarouselOptions">featuredCarouselOptions</a>
+                            </li>
+                            <li>
+                                <a href="#pickInterface">pickInterface</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#subscriptionsService">subscriptionsService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addBetToCart">addBetToCart</a>
+                            </li>
+                            <li>
+                                <a href="#makeChosenOrNot">makeChosenOrNot</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(jsonService: <a href="../injectables/JsonService.html">JsonService</a>, subscriptionsService: <a href="../injectables/SubscriptionsService.html">SubscriptionsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>jsonService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/JsonService.html" target="_self" >JsonService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>subscriptionsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SubscriptionsService.html" target="_self" >SubscriptionsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addBetToCart"></a>
+                    <span class="name">
+                        <b>
+                            addBetToCart
+                        </b>
+                        <a href="#addBetToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addBetToCart(obj, pick)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pick</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="makeChosenOrNot"></a>
+                    <span class="name">
+                        <b>
+                            makeChosenOrNot
+                        </b>
+                        <a href="#makeChosenOrNot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>makeChosenOrNot(firstArr, secondArr)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>firstArr</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>secondArr</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cartFromLocalStorage"></a>
+                        <span class="name">
+                            <b>
+                            cartFromLocalStorage</b>
+                            <a href="#cartFromLocalStorage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="featuredArray"></a>
+                        <span class="name">
+                            <b>
+                            featuredArray</b>
+                            <a href="#featuredArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="featuredArrayLenght"></a>
+                        <span class="name">
+                            <b>
+                            featuredArrayLenght</b>
+                            <a href="#featuredArrayLenght"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="featuredCarouselOptions"></a>
+                        <span class="name">
+                            <b>
+                            featuredCarouselOptions</b>
+                            <a href="#featuredCarouselOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>OwlOptions</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    loop: true,
+    dots: false,
+    nav: true,
+    navText: [&#x27;&#x27;, &#x27;&#x27;],
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    autoplayMouseleaveTimeout: 2000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      550: {
+        items: 2
+      },
+      740: {
+        items: 3
+      }
+
+    }
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pickInterface"></a>
+                        <span class="name">
+                            <b>
+                            pickInterface</b>
+                            <a href="#pickInterface"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Pick.html" target="_self" >Pick</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscriptionsService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            subscriptionsService</b>
+                            <a href="#subscriptionsService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/SubscriptionsService.html" target="_self" >SubscriptionsService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">apps/frontend/src/app/modules/home/featured/featured.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {JsonService} from &quot;../../../shared/services/json/json.service&quot;;
+import {OwlOptions} from &quot;ngx-owl-carousel-o&quot;;
+import {SubscriptionsService} from &quot;../../../shared/services/subscriptions/subscriptions.service&quot;;
+import {Pick} from &#x27;../../../shared/interfaces/pick&#x27;
+
+@Component({
+  selector: &#x27;workspace-featured&#x27;,
+  templateUrl: &#x27;./featured.component.html&#x27;,
+  styleUrls: [&#x27;./featured.component.scss&#x27;]
+})
+export class FeaturedComponent implements OnInit {
+
+  featuredArray: any;
+  pickInterface: Pick;
+  cartFromLocalStorage: any;
+  featuredArrayLenght: any;
+  featuredCarouselOptions: OwlOptions &#x3D; {
+    loop: true,
+    dots: false,
+    nav: true,
+    navText: [&#x27;&#x27;, &#x27;&#x27;],
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    autoplayMouseleaveTimeout: 2000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      550: {
+        items: 2
+      },
+      740: {
+        items: 3
+      }
+
+    }
+  }
+
+  constructor(private jsonService: JsonService, public subscriptionsService: SubscriptionsService) {
+    this.featuredArrayLenght &#x3D; 0;
+  }
+
+  ngOnInit(): void {
+    this.cartFromLocalStorage &#x3D; JSON.parse(localStorage.getItem(&#x27;100BetCart&#x27;))
+    this.jsonService.getJson(&#x27;featured-matches&#x27;).subscribe(e &#x3D;&gt; {
+      this.featuredArray &#x3D; this.makeChosenOrNot(e, this.cartFromLocalStorage);
+      this.featuredArrayLenght &#x3D; this.featuredArray.length;
+    })
+
+  }
+
+  addBetToCart(obj, pick) {
+    if (pick.inCart &#x3D;&#x3D;&#x3D; true) {
+      pick.inCart &#x3D; false;
+      this.subscriptionsService.triggerRemoveFromCart(pick.id);
+    } else {
+      pick.inCart &#x3D; true;
+      this.subscriptionsService.triggerAddPickToCart({
+        pick: this.pickInterface &#x3D; {
+          id: pick.id,
+          date: obj.featuredDate,
+          hour: obj.featuredTime,
+          multiplier: pick.featuredPickMultiplier,
+          teams: [
+            {
+              team: obj.featuredTeams[0].featuredTeamName
+            },
+            {
+              team: obj.featuredTeams[1].featuredTeamName
+            }
+          ]
+        }
+      })
+    }
+  }
+
+  makeChosenOrNot(firstArr, secondArr) {
+    const tempArr1 &#x3D; secondArr.map((e) &#x3D;&gt; e.id)
+    firstArr.forEach((e) &#x3D;&gt; {
+      e.featuredPicks.filter((f) &#x3D;&gt; {
+        if (tempArr1.includes(f.id)) {
+          f.inCart &#x3D; true;
+        }
+      })
+    })
+    return firstArr;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;home__page__featured&quot;&gt;
+
+  &lt;div class&#x3D;&quot;container__fluid&quot;&gt;
+    &lt;div class&#x3D;&quot;solid__blue__header&quot;&gt;
+      Featured Matches
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;featured__wrapper&quot;&gt;
+      &lt;owl-carousel-o *ngIf&#x3D;&quot;featuredArrayLenght&quot; [options]&#x3D;&quot;featuredCarouselOptions&quot;&gt;
+        &lt;ng-container *ngFor&#x3D;&quot;let featured of featuredArray&quot;&gt;
+          &lt;ng-template carouselSlide&gt;
+            &lt;div class&#x3D;&quot;featured__item&quot;&gt;
+              &lt;div class&#x3D;&quot;featured__item__header&quot;&gt;{{featured.featuredTitle}}&lt;/div&gt;
+              &lt;div class&#x3D;&quot;featured__item__body&quot;&gt;
+                &lt;ul&gt;
+                  &lt;li *ngFor&#x3D;&quot;let featuredTeam of featured.featuredTeams&quot;&gt;
+              &lt;span
+                class&#x3D;&quot;featured__team teams__icon&quot;&gt;{{ featuredTeam.featuredTeamName }}&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;featured__score&quot;&gt;{{ featuredTeam.featuredTeamScore }}&lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div class&#x3D;&quot;featured__card_result_body&quot;&gt;
+                  &lt;div class&#x3D;&quot;featured__card_result_time&quot;&gt;
+                    &lt;div&gt;{{ featured.featuredDate }}&lt;/div&gt;
+                    &lt;div&gt;{{ featured.featuredTime }}&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;featured__card__options&quot;&gt;
+                    &lt;ul&gt;
+                      &lt;li *ngFor&#x3D;&quot;let featuredPick of featured.featuredPicks&quot;&gt;
+                        &lt;div class&#x3D;&quot;pick__button&quot; [ngClass]&#x3D;&quot;{&#x27;__is_picked&#x27; : featuredPick.inCart}&quot; (click)&#x3D;&quot;addBetToCart(featured, featuredPick)&quot;&gt;
+                          &lt;span&gt;{{featuredPick.featuredSomethingButDunnoWhat}}&lt;/span&gt;
+                          &lt;div&gt;{{featuredPick.featuredPickMultiplier}}&lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/ng-container&gt;
+      &lt;/owl-carousel-o&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./featured.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../mixins&quot;;
+
+#home__page__featured {
+  margin: 0 10px 10px 10px;
+  border-radius: var(--radius-base);
+  background: #292929;
+  border: 1px solid #404040;
+  overflow: hidden;
+  @include lower-than(&#x27;lg&#x27;) {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .featured__wrapper {
+
+    .featured__item {
+      background: #292929;
+      border-right: 1px solid #404040;
+      @include lower-than(&#x27;lg&#x27;) {
+        border: none;
+        background: #1e1e1e;
+      }
+
+      &amp;__header {
+        padding: 20px 15px 0 15px;
+        color: #8a8a8a;
+      }
+
+      &amp;__body {
+        ul {
+          li {
+            .pick__button {
+              width: 80px;
+              @include lower-than(1475px) {
+                width: 80px;
+                height: 60px;
+                margin: 0;
+                border-left: solid 1px #313131;
+
+              }
+            }
+
+            &amp;:first-child {
+              .pick__button {
+                border: none;
+              }
+
+            }
+          }
+        }
+
+
+        &amp; &gt; ul {
+          color: #dddddd;
+          padding: 15px;
+          @include lower-than(&#x27;lg&#x27;) {
+            padding: 5px 15px 10px 15px;
+          }
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 17px;
+            margin-bottom: 12px;
+            @include lower-than(&#x27;lg&#x27;) {
+              margin-bottom: 0;
+              margin-top: 5px;
+            }
+            .featured__score {
+              font-family: var(--roboto-bold);
+            }
+
+          }
+        }
+      }
+
+      .featured__card_result_body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #404040;
+        padding-left: 15px;
+
+        .featured__card_result_time {
+          color: #5f5f5f;
+          font-size: rem-calc(12);
+          line-height: 14px;
+          display: flex;
+
+          div {
+            margin-right: 6px;
+          }
+        }
+
+        .featured__card__options {
+          ul {
+            display: flex;
+
+            li {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ::ng-deep .owl-nav {
+    margin: 0;
+    @include lower-than(&#x27;lg&#x27;) {
+      display: none;
+    }
+
+    div {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      padding: 0;
+      margin: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 1);
+      transition: all 0.3s ease;
+
+      &amp;:after {
+        font-weight: 900;
+        font-family: &quot;Font Awesome 5 Free&quot;;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        color: var(--dark-blue);
+        position: absolute;
+        font-size: rem-calc(10);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #41494e;
+      }
+
+      &amp;.owl-prev {
+        top: -22px;
+        right: 42px;
+
+        &amp;:after {
+          content: &#x27;\f053&#x27;;
+        }
+      }
+
+      &amp;.owl-next {
+        top: -22px;
+        right: 15px;
+
+        &amp;:after {
+          content: &#x27;\f054&#x27;;
+        }
+      }
+
+      &amp;:hover {
+        background: rgba(255, 255, 255, .07);
+        transition: all 0.3s ease;
+
+        &amp;:after {
+          color: var(--plain-white);
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div id="home__page__featured">  <div class="container__fluid">    <div class="solid__blue__header">      Featured Matches    </div>    <div class="featured__wrapper">      <owl-carousel-o *ngIf="featuredArrayLenght" [options]="featuredCarouselOptions">        <ng-container *ngFor="let featured of featuredArray">          <ng-template carouselSlide>            <div class="featured__item">              <div class="featured__item__header">{{featured.featuredTitle}}</div>              <div class="featured__item__body">                <ul>                  <li *ngFor="let featuredTeam of featured.featuredTeams">              <span                class="featured__team teams__icon">{{ featuredTeam.featuredTeamName }}</span>                    <span class="featured__score">{{ featuredTeam.featuredTeamScore }}</span>                  </li>                </ul>                <div class="featured__card_result_body">                  <div class="featured__card_result_time">                    <div>{{ featured.featuredDate }}</div>                    <div>{{ featured.featuredTime }}</div>                  </div>                  <div class="featured__card__options">                    <ul>                      <li *ngFor="let featuredPick of featured.featuredPicks">                        <div class="pick__button" [ngClass]="{\'__is_picked\' : featuredPick.inCart}" (click)="addBetToCart(featured, featuredPick)">                          <span>{{featuredPick.featuredSomethingButDunnoWhat}}</span>                          <div>{{featuredPick.featuredPickMultiplier}}</div>                        </div>                      </li>                    </ul>                  </div>                </div>              </div>            </div>          </ng-template>        </ng-container>      </owl-carousel-o>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'workspace-root'},{'name': 'AsianHandicapComponent', 'selector': 'workspace-asian-handicap'},{'name': 'BetColumnComponent', 'selector': 'workspace-bet-column'},{'name': 'BetSlipComponent', 'selector': 'workspace-bet-slip'},{'name': 'BetSlipMultiComponent', 'selector': 'workspace-bet-slip-multi'},{'name': 'BetSlipSettingsComponent', 'selector': 'workspace-bet-slip-settings'},{'name': 'BetSlipSingleComponent', 'selector': 'workspace-bet-slip-single'},{'name': 'BetSlipSystemComponent', 'selector': 'workspace-bet-slip-system'},{'name': 'BreadcrumbsComponent', 'selector': 'workspace-breadcrumbs'},{'name': 'CarouselComponent', 'selector': 'workspace-carousel'},{'name': 'CarouselCounterComponent', 'selector': 'workspace-carousel-counter'},{'name': 'CasinoComponent', 'selector': 'workspace-casino'},{'name': 'CasinoGamesComponent', 'selector': 'workspace-casino-games'},{'name': 'FeaturedComponent', 'selector': 'workspace-featured'},{'name': 'FixturesMatchesComponent', 'selector': 'workspace-fixtures-matches'},{'name': 'FixturesOutrightsComponent', 'selector': 'workspace-fixtures-outrights'},{'name': 'FixturesPageComponent', 'selector': 'workspace-fixtures-page'},{'name': 'FixturesStandingsComponent', 'selector': 'workspace-fixtures-standings'},{'name': 'HomeComponent', 'selector': 'workspace-home'},{'name': 'InPlayBannerComponent', 'selector': 'workspace-in-play-banner'},{'name': 'InPlayComponent', 'selector': 'workspace-in-play'},{'name': 'InPlayPageComponent', 'selector': 'workspace-in-play-page'},{'name': 'LeftColumnNavComponent', 'selector': 'workspace-left-column-nav'},{'name': 'LiveEventComponent', 'selector': 'workspace-live-event'},{'name': 'MatchResultsComponent', 'selector': 'workspace-match-results'},{'name': 'MyBetsAllComponent', 'selector': 'workspace-my-bets-all'},{'name': 'MyBetsCashOutComponent', 'selector': 'workspace-my-bets-cash-out'},{'name': 'MyBetsComponent', 'selector': 'workspace-my-bets'},{'name': 'MyBetsLiveNowComponent', 'selector': 'workspace-my-bets-live-now'},{'name': 'MyBetsSettledComponent', 'selector': 'workspace-my-bets-settled'},{'name': 'MyBetsUnsettledComponent', 'selector': 'workspace-my-bets-unsettled'},{'name': 'NavigationComponent', 'selector': 'workspace-navigation'},{'name': 'OhbSelectComponent', 'selector': 'workspace-ohb-select'},{'name': 'PopularBetsComponent', 'selector': 'workspace-popular-bets'},{'name': 'SportsPageComponent', 'selector': 'workspace-sports-page'},{'name': 'StakeNumpadComponent', 'selector': 'workspace-stake-numpad'},{'name': 'TotalGoalsComponent', 'selector': 'workspace-total-goals'},{'name': 'UpcomingComponent', 'selector': 'workspace-upcoming'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FeaturedComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FeaturedComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<p-panel header="Manual Deposit" #manualDepositPanel>
+  <ng-template pTemplate="icons">
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-secondary p-button-text"
+      (click)="onClose($event)"></button>
+  </ng-template>
+  <div class="p-fluid " [ngClass]="{'loading_section': loading}">
+    <div class="p-field p-grid">
+      <label for="userIdInput" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">UserID</label>
+      <div class="p-col-12 p-md-8">
+        <span class="p-float-label">
+          <p-inputNumber [useGrouping]="false" [(ngModel)]="userId" inputId="userIdInput"
+            (onInput)="onInputUserId($event)"></p-inputNumber>
+          <label for="userIdInput">UserID</label>
+        </span>
+        <small id="userId-help" [ngClass]="userIdHelperMsgClass" [innerText]="userIdHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label for="providerDropdown" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">Payment Provider</label>
+      <div class="p-col-12 p-md-8">
+        <p-dropdown [options]="paymentProviders" [(ngModel)]="paymentProvider" optionLabel="providerName" dataKey="id"
+          [appendTo]="manualDepositPanel" inputId="providerDropdown" [disabled]="loadingPaymentProviders || order"
+          [autoDisplayFirst]="false" (onChange)="onSelectPaymentProvider($event)">
+        </p-dropdown>
+        <small id="providerDropdown-help" [ngClass]="paymentProviderHelperMsgClass"
+          [innerText]="paymentProviderHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label for="providerChannelDropdown" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">Channel</label>
+      <div class="p-col-12 p-md-8">
+        <p-dropdown [options]="paymentProviderChannels" [(ngModel)]="paymentProviderChannel"
+          optionLabel="channel.channelName" dataKey="id" [appendTo]="manualDepositPanel"
+          inputId="providerChannelDropdown" [disabled]="loadingPaymentProviderChannels || loadingPaymentProviders"
+          [autoDisplayFirst]="false" (onChange)="onSelectPaymentProviderChannel($event)">
+          <ng-template let-item pTemplate="item">
+            <div class="payment-provider-channel-item">
+              <span>{{item.channel.channelName}}</span>
+              <span class="decent">{{'( '+item.providerChannelName+' )'}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <small id="providerChannelDropdown-help" [ngClass]="paymentProviderChannelHelperMsgClass"
+          [innerText]="paymentProviderChannelHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label for="amountInput" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">Amount</label>
+      <div class="p-col-12 p-md-8">
+        <span class="p-float-label">
+          <p-inputNumber [showButtons]="true" inputId="amountInput" mode="decimal" [min]="minAmount" [max]="maxAmount"
+            [minFractionDigits]="2" [maxFractionDigits]="2" [(ngModel)]="amount" (onInput)="onInputAmount($event)">
+          </p-inputNumber>
+          <label for="amountInput">Amount</label>
+        </span>
+        <small id="amountInput-help" [innerText]="amountHelperMsg" [ngClass]="amountHelperMsgClass"></small>
+      </div>
+    </div>
+    <div class="loading-wrapper" [ngClass]="{'hide_it': !loading}">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <button pButton type="button" label="Submit" class="p-button-text" [disabled]="loading"
+      (click)="onSubmit($event)"></button>
+  </ng-template>
+  <p-confirmDialog [style]="{width: '50vw', 'font-size': '1.5rem'}" [baseZIndex]="10000"
+    rejectButtonStyleClass="p-button-text">
+  </p-confirmDialog>
+</p-panel>

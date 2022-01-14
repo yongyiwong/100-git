@@ -1,0 +1,28 @@
+::ng-deep ng2-smart-table table tr.ng2-smart-titles th:first-child, ::ng-deep ng2-smart-table table tr.ng2-smart-titles th:nth-child(2){
+  text-align: center;
+}
+::ng-deep nb-card-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+::ng-deep ng2-smart-table{
+  white-space: nowrap;
+  *{
+    font-size: 13px !important;
+  }
+  .nb-edit{
+    font-size: 25px !important;
+  }
+}
+
+::ng-deep input[type="checkbox"]{
+  width: auto;
+  display: inline-block;
+  height: auto;
+}
+
+
+.overflowed{
+  overflow-x: auto;
+}

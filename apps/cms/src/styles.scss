@@ -1,0 +1,15 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+.nb-theme-dark ng2-smart-table tbody tr.selected{
+  background: inherit !important;
+}
+
+.nb-theme-dark ng2-smart-table tbody tr:hover{
+  background: #151a30 !important;
+}
+

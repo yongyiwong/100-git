@@ -1,0 +1,1248 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>100bet documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">100bet documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NavigationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/frontend/src/app/components/navigation/navigation.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>workspace-navigation</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./navigation.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navigation.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bottomLine">bottomLine</a>
+                            </li>
+                            <li>
+                                <a href="#mainNavbar">mainNavbar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate">translate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bottomLinePosition">bottomLinePosition</a>
+                            </li>
+                            <li>
+                                <a href="#changeLang">changeLang</a>
+                            </li>
+                            <li>
+                                <a href="#logInAction">logInAction</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#registerAction">registerAction</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, jsonTranslate: <a href="../injectables/TranslateFromJsonService.html">TranslateFromJsonService</a>, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>el</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>jsonTranslate</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TranslateFromJsonService.html" target="_self" >TranslateFromJsonService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bottomLinePosition"></a>
+                    <span class="name">
+                        <b>
+                            bottomLinePosition
+                        </b>
+                        <a href="#bottomLinePosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>bottomLinePosition(el?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>el</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeLang"></a>
+                    <span class="name">
+                        <b>
+                            changeLang
+                        </b>
+                        <a href="#changeLang"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeLang(e, lang)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>lang</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logInAction"></a>
+                    <span class="name">
+                        <b>
+                            logInAction
+                        </b>
+                        <a href="#logInAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logInAction(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerAction"></a>
+                    <span class="name">
+                        <b>
+                            registerAction
+                        </b>
+                        <a href="#registerAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerAction(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bottomLine"></a>
+                        <span class="name">
+                            <b>
+                            bottomLine</b>
+                            <a href="#bottomLine"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;bottomLine&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mainNavbar"></a>
+                        <span class="name">
+                            <b>
+                            mainNavbar</b>
+                            <a href="#mainNavbar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;mainNavbar&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translate</b>
+                            <a href="#translate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslateService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">apps/frontend/src/app/components/navigation/navigation.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild
+} from &#x27;@angular/core&#x27;;
+import {TranslateFromJsonService} from &quot;../../shared/services/translate-from-json/translate-from-json.service&quot;;
+import {TranslateService} from &quot;@ngx-translate/core&quot;;
+
+@Component({
+  selector: &#x27;workspace-navigation&#x27;,
+  templateUrl: &#x27;./navigation.component.html&#x27;,
+  styleUrls: [&#x27;./navigation.component.scss&#x27;]
+})
+export class NavigationComponent implements OnInit, AfterViewInit {
+  @ViewChild(&#x27;bottomLine&#x27;, {static: false}) bottomLine: ElementRef;
+  @ViewChild(&#x27;mainNavbar&#x27;, {static: false}) mainNavbar: ElementRef;
+
+  constructor(private el: ElementRef,
+              private renderer: Renderer2,
+              private jsonTranslate: TranslateFromJsonService,
+              public translate: TranslateService) {
+    this.jsonTranslate.loadTranslation(&#x27;generalTranslations&#x27;, this.translate.currentLang);
+    localStorage.setItem(&#x27;pageLanguage&#x27;, this.translate.currentLang);
+  }
+
+  ngOnInit(): void {
+
+  }
+
+
+  ngAfterViewInit() {
+    setTimeout(() &#x3D;&gt; {
+      this.bottomLinePosition()
+    }, 500)
+  }
+
+
+  bottomLinePosition(el?: any) {
+    if (el &amp;&amp; !el.target.classList.contains(&#x27;navigation__active&#x27;)) {
+      const activeElement &#x3D; el.target;
+      const {width: activeElWidth, x: activeElX} &#x3D; activeElement.getBoundingClientRect();
+      const {x: parentX} &#x3D; this.mainNavbar.nativeElement.getBoundingClientRect();
+      if (this.bottomLine.nativeElement) {
+        this.renderer.setStyle(this.bottomLine.nativeElement, &#x27;left&#x27;, &#x60;${activeElX - parentX}px&#x60;);
+        this.renderer.setStyle(this.bottomLine.nativeElement, &#x27;width&#x27;, &#x60;${activeElWidth}px&#x60;);
+      }
+    } else {
+      const activeElement &#x3D; this.el.nativeElement.querySelectorAll(&#x27;a.navigation__active&#x27;);
+      if (activeElement.length) {
+        const {width: activeElWidth, x: activeElX} &#x3D; activeElement[0].getBoundingClientRect();
+        const {x: parentX} &#x3D; this.mainNavbar.nativeElement.getBoundingClientRect();
+        if (this.bottomLine.nativeElement) {
+          this.renderer.setStyle(this.bottomLine.nativeElement, &#x27;left&#x27;, &#x60;${activeElX - parentX}px&#x60;);
+          this.renderer.setStyle(this.bottomLine.nativeElement, &#x27;width&#x27;, &#x60;${activeElWidth}px&#x60;);
+        }
+      }
+    }
+  }
+
+  logInAction(e) {
+    e.preventDefault();
+    console.log(&#x27;logInAction&#x27;, e);
+  }
+
+  registerAction(e) {
+    e.preventDefault();
+    console.log(&#x27;registerAction&#x27;, e);
+  }
+
+  changeLang(e, lang) {
+    e.preventDefault();
+    this.jsonTranslate.loadTranslation(&#x27;generalTranslations&#x27;, lang);
+    localStorage.setItem(&#x27;pageLanguage&#x27;, lang);
+    setTimeout(() &#x3D;&gt; {
+      this.bottomLinePosition();
+    }, 100)
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;container__fluid&quot;&gt;
+  &lt;div class&#x3D;&quot;header__upper hidden-lg-down&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;&#x27;home/sports&#x27;&quot;&gt;{{ &#x27;nav.navHm&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;&#x27;casino&#x27;&quot;&gt;{{ &#x27;nav.navCas&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;{{ &#x27;nav.navProm&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;{{ &#x27;nav.navLvC&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;{{ &#x27;nav.navGms&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;header__lower container__row&quot;&gt;
+    &lt;div class&#x3D;&quot;logo container__col-3&quot;&gt;
+      &lt;div class&#x3D;&quot;logo__container&quot; [routerLink]&#x3D;&quot;&#x27;home/sports&#x27;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;nav class&#x3D;&quot;main__navbar hidden-lg-down&quot; #mainNavbar&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;&#x27;home/sports&#x27;&quot; routerLinkActive&#x3D;&quot;navigation__active&quot;
+               (mouseenter)&#x3D;&quot;bottomLinePosition($event)&quot;
+               (mouseleave)&#x3D;&quot;bottomLinePosition()&quot;&gt;{{ &#x27;nav.navSp&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;&#x27;home/in-play&#x27;&quot; routerLinkActive&#x3D;&quot;navigation__active&quot;
+               (mouseenter)&#x3D;&quot;bottomLinePosition($event)&quot;
+               (mouseleave)&#x3D;&quot;bottomLinePosition()&quot;&gt;{{ &#x27;nav.navInP&#x27; | translate}}&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class&#x3D;&quot;bottomLine&quot; #bottomLine&gt;&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class&#x3D;&quot;login_buttons&quot;&gt;
+      &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn__solid&quot; (click)&#x3D;&quot;logInAction($event)&quot;&gt;{{ &#x27;nav.navLog&#x27; | translate}}&lt;/a&gt;
+      &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn__solid register&quot; (click)&#x3D;&quot;registerAction($event)&quot;&gt;{{ &#x27;nav.navReg&#x27; | translate}}&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;mobile_menu hidden-lg-up&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; routerLinkActive&#x3D;&quot;navigation_mobile_active&quot;&gt;
+          &lt;span class&#x3D;&quot;mobile_menu_icon&quot;&gt;&lt;i class&#x3D;&quot;far fa-futbol&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span&gt;Soccer&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; [routerLink]&#x3D;&quot;&#x27;home/in-play&#x27;&quot; routerLinkActive&#x3D;&quot;navigation_mobile_active&quot;&gt;
+          &lt;span class&#x3D;&quot;mobile_menu_icon&quot;&gt;
+            &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;21.917&quot; height&#x3D;&quot;24.395&quot; viewBox&#x3D;&quot;0 0 21.917 24.395&quot;&gt;
+  &lt;g id&#x3D;&quot;Group_899&quot; data-name&#x3D;&quot;Group 899&quot; transform&#x3D;&quot;translate(-206.67 239.914)&quot;&gt;
+    &lt;g id&#x3D;&quot;Group_896&quot; data-name&#x3D;&quot;Group 896&quot; transform&#x3D;&quot;translate(206.67 -239.914)&quot;&gt;
+      &lt;g id&#x3D;&quot;Group_895&quot; data-name&#x3D;&quot;Group 895&quot;&gt;
+        &lt;path id&#x3D;&quot;Path_340&quot; data-name&#x3D;&quot;Path 340&quot; d&#x3D;&quot;M225.378-234.262a10.868,10.868,0,0,0-7.035-3.193v-1.029h1.048a.715.715,0,0,0,.715-.715.715.715,0,0,0-.715-.715h-3.526a.715.715,0,0,0-.715.715.715.715,0,0,0,.715.715h1.048v1.029a10.843,10.843,0,0,0-5.084,1.635l-.679-.68a1.737,1.737,0,0,0-1.238-.514,1.737,1.737,0,0,0-1.238.514l-1.033,1.035a1.751,1.751,0,0,0,0,2.47l.684.685a10.922,10.922,0,0,0-1.657,5.811,10.919,10.919,0,0,0,3.209,7.763,10.876,10.876,0,0,0,7.75,3.217,10.876,10.876,0,0,0,7.75-3.217,10.919,10.919,0,0,0,3.209-7.763A10.919,10.919,0,0,0,225.378-234.262Zm-16.723-.193,1.033-1.035a.318.318,0,0,1,.226-.094.318.318,0,0,1,.226.094l.518.519q-.4.334-.778.709t-.705.777l-.519-.52A.32.32,0,0,1,208.655-234.456Zm8.974,17.507A9.551,9.551,0,0,1,208.1-226.5a9.551,9.551,0,0,1,9.529-9.551,9.551,9.551,0,0,1,9.529,9.551A9.551,9.551,0,0,1,217.629-216.948Z&quot; transform&#x3D;&quot;translate(-206.67 239.914)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id&#x3D;&quot;Group_898&quot; data-name&#x3D;&quot;Group 898&quot; transform&#x3D;&quot;translate(216.01 -232.025)&quot;&gt;
+      &lt;g id&#x3D;&quot;Group_897&quot; data-name&#x3D;&quot;Group 897&quot;&gt;
+        &lt;path id&#x3D;&quot;Path_341&quot; data-name&#x3D;&quot;Path 341&quot; d&#x3D;&quot;M253.925-197.525h-1.612v-4.622a1.143,1.143,0,0,0-1.143-1.143,1.143,1.143,0,0,0-1.143,1.143v5.765a1.143,1.143,0,0,0,1.143,1.143h2.755a1.143,1.143,0,0,0,1.143-1.143A1.143,1.143,0,0,0,253.925-197.525Z&quot; transform&#x3D;&quot;translate(-250.027 203.29)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+          &lt;/span&gt;
+          &lt;span&gt;In-Play&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; routerLinkActive&#x3D;&quot;navigation_mobile_active&quot;&gt;
+          &lt;span class&#x3D;&quot;mobile_menu_icon&quot;&gt;
+            &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;27.959&quot; height&#x3D;&quot;27.715&quot; viewBox&#x3D;&quot;0 0 27.959 27.715&quot;&gt;
+  &lt;g id&#x3D;&quot;Group_907&quot; data-name&#x3D;&quot;Group 907&quot; transform&#x3D;&quot;translate(-563.233 238.611)&quot;&gt;
+    &lt;path id&#x3D;&quot;Path_344&quot; data-name&#x3D;&quot;Path 344&quot; d&#x3D;&quot;M584.455-175.034a5.969,5.969,0,0,1-.294,1.857h-.745a.362.362,0,0,1-.14-.027,5.129,5.129,0,0,0,.335-1.829,5.139,5.139,0,0,0-.567-2.352,5.2,5.2,0,0,0-.844-1.192,5.188,5.188,0,0,0-1.76-1.221,5.1,5.1,0,0,0-.844-.271,5.177,5.177,0,0,0-1.152-.129,5.172,5.172,0,0,0-5.166,5.166,5.173,5.173,0,0,0,5.166,5.167,5.16,5.16,0,0,0,1.535-.233,5.155,5.155,0,0,0,1.138-.514h1.4a6.019,6.019,0,0,1-1.17.844,5.967,5.967,0,0,1-2.9.747,6.018,6.018,0,0,1-6.01-6.011,6.017,6.017,0,0,1,6.01-6.011,5.964,5.964,0,0,1,1.152.111,5.821,5.821,0,0,1,.844.23,5.974,5.974,0,0,1,1.76.98,6.018,6.018,0,0,1,.844.824A5.981,5.981,0,0,1,584.455-175.034Z&quot; transform&#x3D;&quot;translate(-7.031 -43.988)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_345&quot; data-name&#x3D;&quot;Path 345&quot; d&#x3D;&quot;M606.246-188.346v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0a8.186,8.186,0,0,0-.844-.5,8.117,8.117,0,0,0-1.76-.663,8.084,8.084,0,0,0-.844-.165v.854a7.207,7.207,0,0,1,.844.184,7.319,7.319,0,0,1,1.76.755,7.311,7.311,0,0,1,.844.584,7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Z&quot; transform&#x3D;&quot;translate(-30.233 -37.394)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_346&quot; data-name&#x3D;&quot;Path 346&quot; d&#x3D;&quot;M588.588-179.188v1.348a1.217,1.217,0,0,1-1.216,1.215h-9.731a8.186,8.186,0,0,1-6.227,2.862,8.163,8.163,0,0,1-8.18-8.126,8.163,8.163,0,0,1,8.18-8.126,8.278,8.278,0,0,1,1.152.08v.854a7.385,7.385,0,0,0-1.152-.09,7.318,7.318,0,0,0-7.337,7.282,7.318,7.318,0,0,0,7.337,7.283,7.342,7.342,0,0,0,5.065-2.018,7.3,7.3,0,0,0,.762-.844,7.266,7.266,0,0,0,.986-1.72,7.012,7.012,0,0,0,.281-.844h.87a7.939,7.939,0,0,1-.248.844,8.048,8.048,0,0,1-.855,1.72h9.1a.372.372,0,0,0,.372-.371v-1.348Z&quot; transform&#x3D;&quot;translate(0 -37.134)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_347&quot; data-name&#x3D;&quot;Path 347&quot; d&#x3D;&quot;M612.292-147.779a5.851,5.851,0,0,1-.348.844,6.034,6.034,0,0,1-1.3,1.72h-1.4a5.2,5.2,0,0,0,1.8-1.829,5.051,5.051,0,0,0,.363-.762.362.362,0,0,0,.14.027Z&quot; transform&#x3D;&quot;translate(-35.162 -69.387)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_348&quot; data-name&#x3D;&quot;Path 348&quot; d&#x3D;&quot;M628.646-238.611H615.055a1.217,1.217,0,0,0-1.216,1.215v12.119a7.305,7.305,0,0,1,.844.584v-12.7a.372.372,0,0,1,.372-.371h13.591a.372.372,0,0,1,.372.371v19.858a.372.372,0,0,1-.372.372h-10.6a7.924,7.924,0,0,1-.248.844h10.846a1.217,1.217,0,0,0,1.216-1.215V-237.4A1.217,1.217,0,0,0,628.646-238.611Z&quot; transform&#x3D;&quot;translate(-38.67 0)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_349&quot; data-name&#x3D;&quot;Path 349&quot; d&#x3D;&quot;M617.977-208.86v.844h.844v-.844Zm-13.963-18.882a1.217,1.217,0,0,0-1.216,1.215v8.617a7.21,7.21,0,0,1,.844.184v-8.8a.372.372,0,0,1,.372-.371h2.232v-.844Z&quot; transform&#x3D;&quot;translate(-30.233 -8.305)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;path id&#x3D;&quot;Path_350&quot; data-name&#x3D;&quot;Path 350&quot; d&#x3D;&quot;M592.154-166.944h1.236a.136.136,0,0,1,.136.136v.434a.136.136,0,0,1-.136.136h-1.251a.136.136,0,0,0-.136.136v1.377h-.371v.01h-.371v-1.377a.136.136,0,0,0-.136-.136h-1.251a.136.136,0,0,1-.136-.136v-.439a.136.136,0,0,1,.136-.136h1.236a.136.136,0,0,0,.136-.136v-.514a.136.136,0,0,0-.136-.136h-1.2a.136.136,0,0,1-.136-.136v-.439a.136.136,0,0,1,.136-.136h.692a.136.136,0,0,0,.121-.2l-.971-1.881a.136.136,0,0,1,.116-.2l.552-.019a.136.136,0,0,1,.125.072l.967,1.81a.136.136,0,0,0,.24,0l.968-1.819a.136.136,0,0,1,.126-.072l.553.023a.136.136,0,0,1,.115.2l-.972,1.882a.136.136,0,0,0,.121.2h.693a.136.136,0,0,1,.136.136v.434a.136.136,0,0,1-.136.136h-1.2a.136.136,0,0,0-.136.136v.519A.136.136,0,0,0,592.154-166.944Z&quot; transform&#x3D;&quot;translate(-20.252 -51.859)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;g id&#x3D;&quot;Group_903&quot; data-name&#x3D;&quot;Group 903&quot; transform&#x3D;&quot;translate(576.991 -236.928)&quot;&gt;
+      &lt;g id&#x3D;&quot;Group_902&quot; data-name&#x3D;&quot;Group 902&quot; transform&#x3D;&quot;translate(0 0)&quot;&gt;
+        &lt;path id&#x3D;&quot;Path_351&quot; data-name&#x3D;&quot;Path 351&quot; d&#x3D;&quot;M623.743-228.661h-1.277l-.111.328a.407.407,0,0,1-.386.276h0a.407.407,0,0,1-.383-.546l.876-2.421a.688.688,0,0,1,.647-.454h0a.687.687,0,0,1,.646.454l.874,2.415a.412.412,0,0,1-.387.552h0a.412.412,0,0,1-.39-.279Zm-.638-1.9-.419,1.252h.843Z&quot; transform&#x3D;&quot;translate(-621.563 231.477)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id&#x3D;&quot;Group_905&quot; data-name&#x3D;&quot;Group 905&quot; transform&#x3D;&quot;translate(585.792 -221.973)&quot;&gt;
+      &lt;g id&#x3D;&quot;Group_904&quot; data-name&#x3D;&quot;Group 904&quot; transform&#x3D;&quot;translate(0 0)&quot;&gt;
+        &lt;path id&#x3D;&quot;Path_352&quot; data-name&#x3D;&quot;Path 352&quot; d&#x3D;&quot;M659.789-167.467h1.276l.111-.328a.407.407,0,0,1,.386-.276h0a.407.407,0,0,1,.383.546l-.876,2.421a.688.688,0,0,1-.646.454h0a.687.687,0,0,1-.646-.454l-.874-2.415a.412.412,0,0,1,.387-.551h0a.411.411,0,0,1,.39.279Zm.638,1.9.419-1.252H660Z&quot; transform&#x3D;&quot;translate(-658.878 168.071)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id&#x3D;&quot;Group_906&quot; data-name&#x3D;&quot;Group 906&quot; transform&#x3D;&quot;translate(579.932 -230.375)&quot;&gt;
+      &lt;path id&#x3D;&quot;Path_353&quot; data-name&#x3D;&quot;Path 353&quot; d&#x3D;&quot;M634.032-201.541v-.379c.016-.012.009-.03.01-.046a2.3,2.3,0,0,1,.211-.808,1.546,1.546,0,0,1,1.051-.884.9.9,0,0,0,.162-.035h.289c0,.012.016.009.025.01a1.468,1.468,0,0,1,.466.134,1.92,1.92,0,0,1,.862.867c.033.062.063.127.1.194l.025-.054a2.008,2.008,0,0,1,.709-.861,1.482,1.482,0,0,1,1.993.274,1.976,1.976,0,0,1,.419.99,1.439,1.439,0,0,0,.029.209v.379c-.014.006-.01.02-.011.03a1.626,1.626,0,0,1-.437.929,2.921,2.921,0,0,1-.435.38c-.259.189-.538.347-.805.523a5.143,5.143,0,0,0-1.327,1.236,1.229,1.229,0,0,0-.157.282,1.532,1.532,0,0,0-.21-.362,4.271,4.271,0,0,0-.621-.658,6.167,6.167,0,0,0-.916-.633,5.006,5.006,0,0,1-.825-.581,1.775,1.775,0,0,1-.563-.913C634.058-201.393,634.056-201.47,634.032-201.541Z&quot; transform&#x3D;&quot;translate(-634.032 203.694)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+
+          &lt;/span&gt;
+          &lt;span&gt;Casino&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; routerLinkActive&#x3D;&quot;navigation_mobile_active&quot;&gt;
+          &lt;span class&#x3D;&quot;mobile_menu_icon&quot;&gt;&lt;i class&#x3D;&quot;fas fa-desktop&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;span&gt;Live&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; routerLinkActive&#x3D;&quot;navigation_mobile_active&quot;&gt;
+          &lt;span class&#x3D;&quot;mobile_menu_icon&quot;&gt;
+            &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;18&quot; height&#x3D;&quot;15.75&quot; viewBox&#x3D;&quot;0 0 18 15.75&quot;&gt;
+  &lt;path id&#x3D;&quot;Path_421&quot; data-name&#x3D;&quot;Path 421&quot; d&#x3D;&quot;M16.313-10.125H15.4a3.12,3.12,0,0,0,.352-1.406,2.976,2.976,0,0,0-.914-2.18,2.976,2.976,0,0,0-2.18-.914,3.206,3.206,0,0,0-1.9.6,7.945,7.945,0,0,0-1.723,1.793,7.945,7.945,0,0,0-1.723-1.793,3.206,3.206,0,0,0-1.9-.6,2.976,2.976,0,0,0-2.18.914,2.976,2.976,0,0,0-.914,2.18,2.978,2.978,0,0,0,.352,1.406H1.688a1.627,1.627,0,0,0-1.2.492A1.627,1.627,0,0,0,0-8.437v4.5a.548.548,0,0,0,.158.4.548.548,0,0,0,.4.158h.563V-.738A1.8,1.8,0,0,0,1.67.58a1.8,1.8,0,0,0,1.318.545H15.012A1.8,1.8,0,0,0,16.33.58a1.8,1.8,0,0,0,.545-1.318V-3.375h.563a.548.548,0,0,0,.4-.158.548.548,0,0,0,.158-.4v-4.5a1.627,1.627,0,0,0-.492-1.2A1.627,1.627,0,0,0,16.313-10.125ZM8.156-.562H2.988a.155.155,0,0,1-.176-.176V-3.375H6.75V-5.062H1.688V-8.437H8.156ZM5.414-10.125a1.361,1.361,0,0,1-1-.4,1.361,1.361,0,0,1-.4-1,1.361,1.361,0,0,1,.4-1,1.361,1.361,0,0,1,1-.4,1.5,1.5,0,0,1,.738.176,2.954,2.954,0,0,1,.9.756A18.843,18.843,0,0,1,8.367-10.23l.07.105ZM9.7-10.23a18.843,18.843,0,0,1,1.318-1.775,2.954,2.954,0,0,1,.9-.756,1.5,1.5,0,0,1,.738-.176,1.361,1.361,0,0,1,1,.4,1.361,1.361,0,0,1,.4,1,1.361,1.361,0,0,1-.4,1,1.361,1.361,0,0,1-1,.4H9.633Zm6.609,5.168H11.25v1.688h3.938V-.738a.155.155,0,0,1-.176.176H9.844V-8.437h6.469Z&quot; transform&#x3D;&quot;translate(0 14.625)&quot; fill&#x3D;&quot;#ffffff&quot;/&gt;
+&lt;/svg&gt;
+
+          &lt;/span&gt;
+          &lt;span&gt;Promos&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./navigation.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../mixins&quot;;
+
+header {
+
+
+  .header {
+    &amp;__upper {
+      height: 36px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 3px 11px 0 #191e2a;
+      background: #0B467D;
+
+      ul {
+        li {
+          display: inline-block;
+
+          a {
+            color: #b4cce2;
+            font-size: 0.9286rem;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            padding: 0 10px;
+
+            &amp;:hover {
+              color: var(--yellow);
+            }
+          }
+        }
+      }
+    }
+
+    &amp;__lower {
+      height: 60px;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      background: #084d8d;
+      box-shadow: 0 10px 9px 0 #191e2a;
+      @include lower-than(&#x27;lg&#x27;) {
+        padding: 0 15px;
+      }
+
+      .logo {
+
+        .logo__container {
+          cursor: pointer;
+          outline: none;
+          height: 35px;
+          width: 117px;
+          background: url(&quot;data:image/svg+xml,%3Csvg xmlns&#x3D;&#x27;http://www.w3.org/2000/svg&#x27; width&#x3D;&#x27;116&#x27; height&#x3D;&#x27;20.88&#x27; viewBox&#x3D;&#x27;0 0 116 20.88&#x27;%3E%3Cg id&#x3D;&#x27;Group_526&#x27; data-name&#x3D;&#x27;Group 526&#x27; transform&#x3D;&#x27;translate(-54 -41.41)&#x27;%3E%3Cpath id&#x3D;&#x27;Path_231&#x27; data-name&#x3D;&#x27;Path 231&#x27; d&#x3D;&#x27;M4.785,0V-15.805L1.45-14.645,0-17.98,5.365-20.3h4.64V0ZM24.8-14.79a1.538,1.538,0,0,0-1.74-1.74h-3.19a1.538,1.538,0,0,0-1.74,1.74v9.28a1.538,1.538,0,0,0,1.74,1.74h3.19A1.538,1.538,0,0,0,24.8-5.51Zm5.22,9.28a6.061,6.061,0,0,1-1.378,4.423A6.061,6.061,0,0,1,24.215.29H18.7a6.061,6.061,0,0,1-4.422-1.378A6.061,6.061,0,0,1,12.9-5.51v-9.28a6.061,6.061,0,0,1,1.378-4.422A6.061,6.061,0,0,1,18.7-20.59h5.51a6.061,6.061,0,0,1,4.423,1.377,6.061,6.061,0,0,1,1.378,4.422Zm14.21-9.28a1.538,1.538,0,0,0-1.74-1.74h-3.19a1.538,1.538,0,0,0-1.74,1.74v9.28a1.538,1.538,0,0,0,1.74,1.74h3.19a1.538,1.538,0,0,0,1.74-1.74Zm5.22,9.28a6.061,6.061,0,0,1-1.377,4.423A6.061,6.061,0,0,1,43.645.29h-5.51a6.061,6.061,0,0,1-4.423-1.378A6.061,6.061,0,0,1,32.335-5.51v-9.28a6.061,6.061,0,0,1,1.377-4.422,6.061,6.061,0,0,1,4.423-1.377h5.51a6.061,6.061,0,0,1,4.423,1.377,6.061,6.061,0,0,1,1.377,4.422Zm11.6-14.79h11.6a5.824,5.824,0,0,1,4.176,1.29,5.238,5.238,0,0,1,1.334,3.93,4.862,4.862,0,0,1-.754,2.828,4.06,4.06,0,0,1-1.856,1.523A4.492,4.492,0,0,1,78.735-7.6a6.81,6.81,0,0,1,.29,2.088,5.7,5.7,0,0,1-1.334,4.176A5.7,5.7,0,0,1,73.515,0H61.045ZM73.805-6.38a1.538,1.538,0,0,0-1.74-1.74h-5.8v4.06h5.8a1.538,1.538,0,0,0,1.74-1.74Zm-.87-8.12a1.538,1.538,0,0,0-1.74-1.74h-4.93v4.06h4.93a1.538,1.538,0,0,0,1.74-1.74ZM97.73,0h-16.1V-20.3h16.1v4.06H86.855v3.915H95.41v4.06H86.855V-4.06H97.73Zm12.18,0h-5.22V-16.24H98.6V-20.3H116v4.06h-6.09Z&#x27; transform&#x3D;&#x27;translate(54 62)&#x27; fill&#x3D;&#x27;%23fff&#x27;/%3E%3Crect id&#x3D;&#x27;Rectangle_14&#x27; data-name&#x3D;&#x27;Rectangle 14&#x27; width&#x3D;&#x27;6&#x27; height&#x3D;&#x27;7&#x27; transform&#x3D;&#x27;translate(106 55)&#x27; fill&#x3D;&#x27;%23fed40d&#x27;/%3E%3C/g%3E%3C/svg%3E%0A&quot;) 50%/contain no-repeat;
+        }
+
+      }
+
+      nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        ul {
+          li {
+            display: inline-block;
+
+            a {
+              font-family: var(--roboto-medium);
+              color: var(--plain-white);
+              padding: 12px;
+              display: inline-block;
+            }
+          }
+        }
+
+        .bottomLine {
+          height: 3px;
+          background: var(--yellow);
+          position: absolute;
+          bottom: 0;
+          transition: all .5s ease;
+        }
+      }
+
+      .login_buttons {
+        margin-left: auto;
+
+        a {
+          margin-left: 11px;
+
+          &amp;.register {
+            background: #79BD1F;
+            border-color: #79BD1F;
+            color: var(--plain-white);
+
+            &amp;:hover {
+              background: var(--plain-white);
+              color: #79BD1F;
+            }
+          }
+          @include lower-than(&#x27;md&#x27;){
+            height: 40px;
+            line-height: 40px;
+            padding:0 20px;
+            font-size: rem-calc(13);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile__bottom_nav {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 100;
+    background: var(--dark-blue);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+
+    ul {
+      display: flex;
+
+      li {
+        width: 20%;
+
+        a {
+          color: var(--plain-white);
+          font-size: rem-calc(13);
+          height: 69px;
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .mobile_menu {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        text-align: center;
+        width: 20%;
+        border-right: 1px solid #313131;
+        a{
+          height: 60px;
+          display: flex;
+          background: #252525;
+          color: var(--plain-white);
+          font-size: rem-calc(12);
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          span{
+            &amp;.mobile_menu_icon{
+              margin-bottom: 10px;
+            }
+            i {
+              font-size: 17px;
+              transition: all 0.3s ease;
+            }
+            svg{
+              height: 20px;
+              display: block;
+              transition: all 0.3s ease;
+              path{
+                transition: all 0.3s ease;
+              }
+            }
+          }
+          &amp;.navigation_mobile_active{
+            i{
+              color: var(--yellow);
+              transition: all 0.3s ease;
+            }
+            svg{
+              transition: all 0.3s ease;
+              path{
+                fill: var(--yellow);
+                transition: all 0.3s ease;
+              }
+            }
+          }
+        }
+        &amp;:last-child{
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.navigation_mobile_bottom{
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><header class="container__fluid">  <div class="header__upper hidden-lg-down">    <ul>      <li><a [routerLink]="\'home/sports\'">{{ \'nav.navHm\' | translate}}</a></li>      <li><a [routerLink]="\'casino\'">{{ \'nav.navCas\' | translate}}</a></li>      <li><a href="#">{{ \'nav.navProm\' | translate}}</a></li>      <li><a href="#">{{ \'nav.navLvC\' | translate}}</a></li>      <li><a href="#">{{ \'nav.navGms\' | translate}}</a></li>    </ul>  </div>  <div class="header__lower container__row">    <div class="logo container__col-3">      <div class="logo__container" [routerLink]="\'home/sports\'"></div>    </div>    <nav class="main__navbar hidden-lg-down" #mainNavbar>      <ul>        <li><a [routerLink]="\'home/sports\'" routerLinkActive="navigation__active"               (mouseenter)="bottomLinePosition($event)"               (mouseleave)="bottomLinePosition()">{{ \'nav.navSp\' | translate}}</a></li>        <li><a [routerLink]="\'home/in-play\'" routerLinkActive="navigation__active"               (mouseenter)="bottomLinePosition($event)"               (mouseleave)="bottomLinePosition()">{{ \'nav.navInP\' | translate}}</a></li>      </ul>      <div class="bottomLine" #bottomLine></div>    </nav>    <div class="login_buttons">      <a href="#" class="btn__solid" (click)="logInAction($event)">{{ \'nav.navLog\' | translate}}</a>      <a href="#" class="btn__solid register" (click)="registerAction($event)">{{ \'nav.navReg\' | translate}}</a>    </div>  </div>  <div class="mobile_menu hidden-lg-up">    <ul>      <li>        <a href="#" routerLinkActive="navigation_mobile_active">          <span class="mobile_menu_icon"><i class="far fa-futbol"></i></span>        <span>Soccer</span>      </a>      </li>      <li>        <a href="#" [routerLink]="\'home/in-play\'" routerLinkActive="navigation_mobile_active">          <span class="mobile_menu_icon">            <svg xmlns="http://www.w3.org/2000/svg" width="21.917" height="24.395" viewBox="0 0 21.917 24.395">  <g id="Group_899" data-name="Group 899" transform="translate(-206.67 239.914)">    <g id="Group_896" data-name="Group 896" transform="translate(206.67 -239.914)">      <g id="Group_895" data-name="Group 895">        <path id="Path_340" data-name="Path 340" d="M225.378-234.262a10.868,10.868,0,0,0-7.035-3.193v-1.029h1.048a.715.715,0,0,0,.715-.715.715.715,0,0,0-.715-.715h-3.526a.715.715,0,0,0-.715.715.715.715,0,0,0,.715.715h1.048v1.029a10.843,10.843,0,0,0-5.084,1.635l-.679-.68a1.737,1.737,0,0,0-1.238-.514,1.737,1.737,0,0,0-1.238.514l-1.033,1.035a1.751,1.751,0,0,0,0,2.47l.684.685a10.922,10.922,0,0,0-1.657,5.811,10.919,10.919,0,0,0,3.209,7.763,10.876,10.876,0,0,0,7.75,3.217,10.876,10.876,0,0,0,7.75-3.217,10.919,10.919,0,0,0,3.209-7.763A10.919,10.919,0,0,0,225.378-234.262Zm-16.723-.193,1.033-1.035a.318.318,0,0,1,.226-.094.318.318,0,0,1,.226.094l.518.519q-.4.334-.778.709t-.705.777l-.519-.52A.32.32,0,0,1,208.655-234.456Zm8.974,17.507A9.551,9.551,0,0,1,208.1-226.5a9.551,9.551,0,0,1,9.529-9.551,9.551,9.551,0,0,1,9.529,9.551A9.551,9.551,0,0,1,217.629-216.948Z" transform="translate(-206.67 239.914)" fill="#ffffff"/>      </g>    </g>    <g id="Group_898" data-name="Group 898" transform="translate(216.01 -232.025)">      <g id="Group_897" data-name="Group 897">        <path id="Path_341" data-name="Path 341" d="M253.925-197.525h-1.612v-4.622a1.143,1.143,0,0,0-1.143-1.143,1.143,1.143,0,0,0-1.143,1.143v5.765a1.143,1.143,0,0,0,1.143,1.143h2.755a1.143,1.143,0,0,0,1.143-1.143A1.143,1.143,0,0,0,253.925-197.525Z" transform="translate(-250.027 203.29)" fill="#ffffff"/>      </g>    </g>  </g></svg>          </span>          <span>In-Play</span>        </a>      </li>      <li>        <a href="#" routerLinkActive="navigation_mobile_active">          <span class="mobile_menu_icon">            <svg xmlns="http://www.w3.org/2000/svg" width="27.959" height="27.715" viewBox="0 0 27.959 27.715">  <g id="Group_907" data-name="Group 907" transform="translate(-563.233 238.611)">    <path id="Path_344" data-name="Path 344" d="M584.455-175.034a5.969,5.969,0,0,1-.294,1.857h-.745a.362.362,0,0,1-.14-.027,5.129,5.129,0,0,0,.335-1.829,5.139,5.139,0,0,0-.567-2.352,5.2,5.2,0,0,0-.844-1.192,5.188,5.188,0,0,0-1.76-1.221,5.1,5.1,0,0,0-.844-.271,5.177,5.177,0,0,0-1.152-.129,5.172,5.172,0,0,0-5.166,5.166,5.173,5.173,0,0,0,5.166,5.167,5.16,5.16,0,0,0,1.535-.233,5.155,5.155,0,0,0,1.138-.514h1.4a6.019,6.019,0,0,1-1.17.844,5.967,5.967,0,0,1-2.9.747,6.018,6.018,0,0,1-6.01-6.011,6.017,6.017,0,0,1,6.01-6.011,5.964,5.964,0,0,1,1.152.111,5.821,5.821,0,0,1,.844.23,5.974,5.974,0,0,1,1.76.98,6.018,6.018,0,0,1,.844.824A5.981,5.981,0,0,1,584.455-175.034Z" transform="translate(-7.031 -43.988)" fill="#ffffff"/>    <path id="Path_345" data-name="Path 345" d="M606.246-188.346v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0a8.186,8.186,0,0,0-.844-.5,8.117,8.117,0,0,0-1.76-.663,8.084,8.084,0,0,0-.844-.165v.854a7.207,7.207,0,0,1,.844.184,7.319,7.319,0,0,1,1.76.755,7.311,7.311,0,0,1,.844.584,7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Zm0,0v1.047a7.253,7.253,0,0,1,2.737,5.67,7.189,7.189,0,0,1-.242,1.857h.87a8.038,8.038,0,0,0,.216-1.857A8.109,8.109,0,0,0,606.246-188.346Z" transform="translate(-30.233 -37.394)" fill="#ffffff"/>    <path id="Path_346" data-name="Path 346" d="M588.588-179.188v1.348a1.217,1.217,0,0,1-1.216,1.215h-9.731a8.186,8.186,0,0,1-6.227,2.862,8.163,8.163,0,0,1-8.18-8.126,8.163,8.163,0,0,1,8.18-8.126,8.278,8.278,0,0,1,1.152.08v.854a7.385,7.385,0,0,0-1.152-.09,7.318,7.318,0,0,0-7.337,7.282,7.318,7.318,0,0,0,7.337,7.283,7.342,7.342,0,0,0,5.065-2.018,7.3,7.3,0,0,0,.762-.844,7.266,7.266,0,0,0,.986-1.72,7.012,7.012,0,0,0,.281-.844h.87a7.939,7.939,0,0,1-.248.844,8.048,8.048,0,0,1-.855,1.72h9.1a.372.372,0,0,0,.372-.371v-1.348Z" transform="translate(0 -37.134)" fill="#ffffff"/>    <path id="Path_347" data-name="Path 347" d="M612.292-147.779a5.851,5.851,0,0,1-.348.844,6.034,6.034,0,0,1-1.3,1.72h-1.4a5.2,5.2,0,0,0,1.8-1.829,5.051,5.051,0,0,0,.363-.762.362.362,0,0,0,.14.027Z" transform="translate(-35.162 -69.387)" fill="#ffffff"/>    <path id="Path_348" data-name="Path 348" d="M628.646-238.611H615.055a1.217,1.217,0,0,0-1.216,1.215v12.119a7.305,7.305,0,0,1,.844.584v-12.7a.372.372,0,0,1,.372-.371h13.591a.372.372,0,0,1,.372.371v19.858a.372.372,0,0,1-.372.372h-10.6a7.924,7.924,0,0,1-.248.844h10.846a1.217,1.217,0,0,0,1.216-1.215V-237.4A1.217,1.217,0,0,0,628.646-238.611Z" transform="translate(-38.67 0)" fill="#ffffff"/>    <path id="Path_349" data-name="Path 349" d="M617.977-208.86v.844h.844v-.844Zm-13.963-18.882a1.217,1.217,0,0,0-1.216,1.215v8.617a7.21,7.21,0,0,1,.844.184v-8.8a.372.372,0,0,1,.372-.371h2.232v-.844Z" transform="translate(-30.233 -8.305)" fill="#ffffff"/>    <path id="Path_350" data-name="Path 350" d="M592.154-166.944h1.236a.136.136,0,0,1,.136.136v.434a.136.136,0,0,1-.136.136h-1.251a.136.136,0,0,0-.136.136v1.377h-.371v.01h-.371v-1.377a.136.136,0,0,0-.136-.136h-1.251a.136.136,0,0,1-.136-.136v-.439a.136.136,0,0,1,.136-.136h1.236a.136.136,0,0,0,.136-.136v-.514a.136.136,0,0,0-.136-.136h-1.2a.136.136,0,0,1-.136-.136v-.439a.136.136,0,0,1,.136-.136h.692a.136.136,0,0,0,.121-.2l-.971-1.881a.136.136,0,0,1,.116-.2l.552-.019a.136.136,0,0,1,.125.072l.967,1.81a.136.136,0,0,0,.24,0l.968-1.819a.136.136,0,0,1,.126-.072l.553.023a.136.136,0,0,1,.115.2l-.972,1.882a.136.136,0,0,0,.121.2h.693a.136.136,0,0,1,.136.136v.434a.136.136,0,0,1-.136.136h-1.2a.136.136,0,0,0-.136.136v.519A.136.136,0,0,0,592.154-166.944Z" transform="translate(-20.252 -51.859)" fill="#ffffff"/>    <g id="Group_903" data-name="Group 903" transform="translate(576.991 -236.928)">      <g id="Group_902" data-name="Group 902" transform="translate(0 0)">        <path id="Path_351" data-name="Path 351" d="M623.743-228.661h-1.277l-.111.328a.407.407,0,0,1-.386.276h0a.407.407,0,0,1-.383-.546l.876-2.421a.688.688,0,0,1,.647-.454h0a.687.687,0,0,1,.646.454l.874,2.415a.412.412,0,0,1-.387.552h0a.412.412,0,0,1-.39-.279Zm-.638-1.9-.419,1.252h.843Z" transform="translate(-621.563 231.477)" fill="#ffffff"/>      </g>    </g>    <g id="Group_905" data-name="Group 905" transform="translate(585.792 -221.973)">      <g id="Group_904" data-name="Group 904" transform="translate(0 0)">        <path id="Path_352" data-name="Path 352" d="M659.789-167.467h1.276l.111-.328a.407.407,0,0,1,.386-.276h0a.407.407,0,0,1,.383.546l-.876,2.421a.688.688,0,0,1-.646.454h0a.687.687,0,0,1-.646-.454l-.874-2.415a.412.412,0,0,1,.387-.551h0a.411.411,0,0,1,.39.279Zm.638,1.9.419-1.252H660Z" transform="translate(-658.878 168.071)" fill="#ffffff"/>      </g>    </g>    <g id="Group_906" data-name="Group 906" transform="translate(579.932 -230.375)">      <path id="Path_353" data-name="Path 353" d="M634.032-201.541v-.379c.016-.012.009-.03.01-.046a2.3,2.3,0,0,1,.211-.808,1.546,1.546,0,0,1,1.051-.884.9.9,0,0,0,.162-.035h.289c0,.012.016.009.025.01a1.468,1.468,0,0,1,.466.134,1.92,1.92,0,0,1,.862.867c.033.062.063.127.1.194l.025-.054a2.008,2.008,0,0,1,.709-.861,1.482,1.482,0,0,1,1.993.274,1.976,1.976,0,0,1,.419.99,1.439,1.439,0,0,0,.029.209v.379c-.014.006-.01.02-.011.03a1.626,1.626,0,0,1-.437.929,2.921,2.921,0,0,1-.435.38c-.259.189-.538.347-.805.523a5.143,5.143,0,0,0-1.327,1.236,1.229,1.229,0,0,0-.157.282,1.532,1.532,0,0,0-.21-.362,4.271,4.271,0,0,0-.621-.658,6.167,6.167,0,0,0-.916-.633,5.006,5.006,0,0,1-.825-.581,1.775,1.775,0,0,1-.563-.913C634.058-201.393,634.056-201.47,634.032-201.541Z" transform="translate(-634.032 203.694)" fill="#ffffff"/>    </g>  </g></svg>          </span>          <span>Casino</span></a>      </li>      <li>        <a href="#" routerLinkActive="navigation_mobile_active">          <span class="mobile_menu_icon"><i class="fas fa-desktop"></i></span>          <span>Live</span></a>      </li>      <li>        <a href="#" routerLinkActive="navigation_mobile_active">          <span class="mobile_menu_icon">            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15.75" viewBox="0 0 18 15.75">  <path id="Path_421" data-name="Path 421" d="M16.313-10.125H15.4a3.12,3.12,0,0,0,.352-1.406,2.976,2.976,0,0,0-.914-2.18,2.976,2.976,0,0,0-2.18-.914,3.206,3.206,0,0,0-1.9.6,7.945,7.945,0,0,0-1.723,1.793,7.945,7.945,0,0,0-1.723-1.793,3.206,3.206,0,0,0-1.9-.6,2.976,2.976,0,0,0-2.18.914,2.976,2.976,0,0,0-.914,2.18,2.978,2.978,0,0,0,.352,1.406H1.688a1.627,1.627,0,0,0-1.2.492A1.627,1.627,0,0,0,0-8.437v4.5a.548.548,0,0,0,.158.4.548.548,0,0,0,.4.158h.563V-.738A1.8,1.8,0,0,0,1.67.58a1.8,1.8,0,0,0,1.318.545H15.012A1.8,1.8,0,0,0,16.33.58a1.8,1.8,0,0,0,.545-1.318V-3.375h.563a.548.548,0,0,0,.4-.158.548.548,0,0,0,.158-.4v-4.5a1.627,1.627,0,0,0-.492-1.2A1.627,1.627,0,0,0,16.313-10.125ZM8.156-.562H2.988a.155.155,0,0,1-.176-.176V-3.375H6.75V-5.062H1.688V-8.437H8.156ZM5.414-10.125a1.361,1.361,0,0,1-1-.4,1.361,1.361,0,0,1-.4-1,1.361,1.361,0,0,1,.4-1,1.361,1.361,0,0,1,1-.4,1.5,1.5,0,0,1,.738.176,2.954,2.954,0,0,1,.9.756A18.843,18.843,0,0,1,8.367-10.23l.07.105ZM9.7-10.23a18.843,18.843,0,0,1,1.318-1.775,2.954,2.954,0,0,1,.9-.756,1.5,1.5,0,0,1,.738-.176,1.361,1.361,0,0,1,1,.4,1.361,1.361,0,0,1,.4,1,1.361,1.361,0,0,1-.4,1,1.361,1.361,0,0,1-1,.4H9.633Zm6.609,5.168H11.25v1.688h3.938V-.738a.155.155,0,0,1-.176.176H9.844V-8.437h6.469Z" transform="translate(0 14.625)" fill="#ffffff"/></svg>          </span>          <span>Promos</span></a>      </li>    </ul>  </div></header></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'workspace-root'},{'name': 'AsianHandicapComponent', 'selector': 'workspace-asian-handicap'},{'name': 'BetColumnComponent', 'selector': 'workspace-bet-column'},{'name': 'BetSlipComponent', 'selector': 'workspace-bet-slip'},{'name': 'BetSlipMultiComponent', 'selector': 'workspace-bet-slip-multi'},{'name': 'BetSlipSettingsComponent', 'selector': 'workspace-bet-slip-settings'},{'name': 'BetSlipSingleComponent', 'selector': 'workspace-bet-slip-single'},{'name': 'BetSlipSystemComponent', 'selector': 'workspace-bet-slip-system'},{'name': 'BreadcrumbsComponent', 'selector': 'workspace-breadcrumbs'},{'name': 'CarouselComponent', 'selector': 'workspace-carousel'},{'name': 'CarouselCounterComponent', 'selector': 'workspace-carousel-counter'},{'name': 'CasinoComponent', 'selector': 'workspace-casino'},{'name': 'CasinoGamesComponent', 'selector': 'workspace-casino-games'},{'name': 'FeaturedComponent', 'selector': 'workspace-featured'},{'name': 'FixturesMatchesComponent', 'selector': 'workspace-fixtures-matches'},{'name': 'FixturesOutrightsComponent', 'selector': 'workspace-fixtures-outrights'},{'name': 'FixturesPageComponent', 'selector': 'workspace-fixtures-page'},{'name': 'FixturesStandingsComponent', 'selector': 'workspace-fixtures-standings'},{'name': 'HomeComponent', 'selector': 'workspace-home'},{'name': 'InPlayBannerComponent', 'selector': 'workspace-in-play-banner'},{'name': 'InPlayComponent', 'selector': 'workspace-in-play'},{'name': 'InPlayPageComponent', 'selector': 'workspace-in-play-page'},{'name': 'LeftColumnNavComponent', 'selector': 'workspace-left-column-nav'},{'name': 'LiveEventComponent', 'selector': 'workspace-live-event'},{'name': 'MatchResultsComponent', 'selector': 'workspace-match-results'},{'name': 'MyBetsAllComponent', 'selector': 'workspace-my-bets-all'},{'name': 'MyBetsCashOutComponent', 'selector': 'workspace-my-bets-cash-out'},{'name': 'MyBetsComponent', 'selector': 'workspace-my-bets'},{'name': 'MyBetsLiveNowComponent', 'selector': 'workspace-my-bets-live-now'},{'name': 'MyBetsSettledComponent', 'selector': 'workspace-my-bets-settled'},{'name': 'MyBetsUnsettledComponent', 'selector': 'workspace-my-bets-unsettled'},{'name': 'NavigationComponent', 'selector': 'workspace-navigation'},{'name': 'OhbSelectComponent', 'selector': 'workspace-ohb-select'},{'name': 'PopularBetsComponent', 'selector': 'workspace-popular-bets'},{'name': 'SportsPageComponent', 'selector': 'workspace-sports-page'},{'name': 'StakeNumpadComponent', 'selector': 'workspace-stake-numpad'},{'name': 'TotalGoalsComponent', 'selector': 'workspace-total-goals'},{'name': 'UpcomingComponent', 'selector': 'workspace-upcoming'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavigationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavigationComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

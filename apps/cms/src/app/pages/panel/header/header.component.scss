@@ -1,0 +1,54 @@
+::ng-deep cms-header{
+  display: flex;
+  width: 100%;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  .header-container_menu{
+    margin-left: auto;
+  }
+}
+.logo-container {
+  display: inline-block;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: calc(16rem - 1.25rem);
+  .sidebar-toggle{
+    text-decoration: none;
+    color: #8f9bb3;
+    padding-right: 1.25rem;
+    nb-icon{
+      font-size: 1.75rem;
+    }
+  }
+  .logo{
+    padding: 0 1.25rem;
+    font-size: 1.75rem;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    img{
+      max-height: 40px;
+    }
+    span{
+      position: absolute;
+    }
+  }
+}
+
+.user-container {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.user-title {
+  float: left;
+}
+

@@ -1,0 +1,132 @@
+<p-panel [header]="'Add Payment Provider Card'" #addPaymentProviderCard>
+  <ng-template pTemplate="icons">
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-secondary p-button-text"
+      (click)="onClose($event)"></button>
+  </ng-template>
+  <div class="p-fluid " [ngClass]="{'loading_section': loading}">
+    <div class="p-field p-grid">
+      <!-- <label for="providerDropdown" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">Payment Provider</label> -->
+      <div class="p-col-12 p-md-6">
+        <span class="p-float-label">
+          <p-dropdown [options]="paymentProviders" [(ngModel)]="paymentProvider" optionLabel="providerName" dataKey="id"
+            [appendTo]="addPaymentProviderCard" inputId="providerDropdown"
+            [disabled]="loadingPaymentProviders || paymentProviderCard" [autoDisplayFirst]="false"
+            (onChange)="onSelectPaymentProvider($event)">
+          </p-dropdown>
+          <label for="providerDropdown">PaymentProvider</label>
+        </span>
+        <small id="providerDropdown-help" [ngClass]="paymentProviderHelperMsgClass"
+          [innerText]="paymentProviderHelperMsg"></small>
+      </div>
+      <div class="p-col-12 p-md-6">
+        <span class="p-float-label">
+          <p-dropdown [options]="banks" [(ngModel)]="bank" optionLabel="bankName" dataKey="id"
+            [appendTo]="addPaymentProviderCard" inputId="bankDropdown" [disabled]="loadingBanks"
+            [autoDisplayFirst]="false" (onChange)="onSelectBank($event)">
+            <ng-template pTemplate="selectedItem">
+              <div *ngIf="bank">
+                <div>
+                  {{bank.bankName}} ( {{bank.bankCode}} )
+                </div>
+              </div>
+            </ng-template>
+            <ng-template let-item pTemplate="item">
+              <div class="bank-item">
+                <span>{{item.bankName}}</span>
+                <span class="decent">{{'( '+item.bankCode+' )'}}</span>
+              </div>
+            </ng-template>
+          </p-dropdown>
+          <label for="bankDropdown">Bank</label>
+        </span>
+        <small id="bankDropdown-help" [ngClass]="bankHelperMsgClass" [innerText]="bankHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <div class="p-col-12 p-md-5">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="bankAccountName" id="bankAccountNameInput"
+            (change)="onInputBankAccountName($event)" />
+          <label for="bankAccountNameInput">Bank Account Name</label>
+        </span>
+        <small id="bankAccountName-help" [ngClass]="bankAccountNameHelperMsgClass"
+          [innerText]="bankAccountNameHelperMsg"></small>
+      </div>
+      <div class="p-col-12 p-md-7">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="bankAccountNumber" id="bankAccountNameNumber"
+            (change)="onInputBankAccountNumber($event)" />
+          <label for="bankAccountNumberInput">Bank Account Number</label>
+        </span>
+        <small id="bankAccountNumber-help" [ngClass]="bankAccountNumberHelperMsgClass"
+          [innerText]="bankAccountNumberHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <div class="p-col-12 p-md-3">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="branch" id="branchInput" (change)="onInputBranch($event)" />
+          <label for="branchInput">Branch</label>
+        </span>
+        <small id="branch-help" [ngClass]="branchHelperMsgClass" [innerText]="branchHelperMsg"></small>
+      </div>
+      <div class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="province" id="provinceInput" (change)="onInputProvince($event)" />
+          <label for="provinceInput">Province</label>
+        </span>
+        <small id="province-help" [ngClass]="provinceHelperMsgClass" [innerText]="provinceHelperMsg"></small>
+      </div>
+      <div class="p-col-12 p-md-5">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="city" id="cityInput" (change)="onInputCity($event)" />
+          <label for="cityInput">City</label>
+        </span>
+        <small id="city-help" [ngClass]="cityHelperMsgClass" [innerText]="cityHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid p-jc-end">
+      <div class="p-col-12 p-md-3">
+        <span class="p-float-label">
+          <p-inputNumber [showButtons]="true" inputId="minAmountInput" mode="decimal" [minFractionDigits]="1"
+            [maxFractionDigits]="2" [(ngModel)]="minAmount" (onInput)="onInputMinAmount($event)" [max]="maxAmount">
+          </p-inputNumber>
+          <label for="minAmountInput">minAmount</label>
+        </span>
+        <small id="minAmountInput-help" [innerText]="minAmountHelperMsg" [ngClass]="minAmountHelperMsgClass"></small>
+      </div>
+      <div class="p-col-12 p-md-3">
+        <span class="p-float-label">
+          <p-inputNumber [showButtons]="true" inputId="maxAmountInput" mode="decimal" [minFractionDigits]="1"
+            [maxFractionDigits]="2" [(ngModel)]="maxAmount" (onInput)="onInputMaxAmount($event)" [min]="minAmount">
+          </p-inputNumber>
+          <label for="maxAmountInput">maxAmount</label>
+        </span>
+        <small id="maxAmountInput-help" [innerText]="maxAmountHelperMsg" [ngClass]="maxAmountHelperMsgClass"></small>
+      </div>
+      <div class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <p-inputNumber [showButtons]="true" inputId="maxDailyAmountInput" mode="decimal" [minFractionDigits]="1"
+            [maxFractionDigits]="2" [(ngModel)]="maxDailyAmount">
+          </p-inputNumber>
+          <label for="maxDailyAmountInput">maxDailyAmount</label>
+        </span>
+        <small id="maxDailyAmountInput-help" [innerText]="maxDailyAmountHelperMsg"
+          [ngClass]="maxDailyAmountHelperMsgClass"></small>
+      </div>
+      <div class="p-col-12 p-md-2 p-d-flex p-ai-center">
+        <div class="p-field-checkbox ">
+          <p-checkbox [(ngModel)]="active" binary="true" inputId="binary"></p-checkbox>
+          <label for="binary">Active</label>
+        </div>
+      </div>
+    </div>
+    <div class="loading-wrapper" [ngClass]="{'hide_it': !loading}">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <button pButton type="button" label="Submit" class="p-button-text" [disabled]="loading"
+      (click)="onSubmit($event)"></button>
+  </ng-template>
+</p-panel>

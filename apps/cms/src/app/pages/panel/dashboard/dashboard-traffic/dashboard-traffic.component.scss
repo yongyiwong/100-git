@@ -1,0 +1,77 @@
+
+nb-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    flex: 1;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.delta {
+  display: flex;
+  align-items: center;
+
+  &.down {
+    color: #ff3d71;
+  }
+
+  &.up {
+    color: #00d68f;
+  }
+}
+
+.traffic_bar {
+  display: flex;
+  align-items: flex-end;
+  height: 1.25rem;
+  max-width: 7rem;
+
+  .value-prev,
+  .value-now {
+    flex: 1;
+  }
+
+  .progress-line-container {
+    flex: 1;
+    margin-bottom: 0.1875rem;
+  }
+
+  .progress-line-prev,
+  .progress-line-now {
+    height: 100%;
+    width: 0.7rem;
+  }
+
+  .progress-line-prev {
+    background-color: #151a30;
+    margin-left: auto;
+    margin-right: 0.25rem;
+  }
+
+  .progress-line-now {
+
+    margin-left: 0.25rem;
+    margin-right: auto;
+
+
+    &.success {
+      background-color: #00d68f;
+    }
+
+    &.failure {
+      background-color: #ff3d71;
+    }
+  }
+}

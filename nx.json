@@ -1,0 +1,52 @@
+{
+  "npmScope": "workspace",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "frontend": {
+      "tags": []
+    },
+    "frontend-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend"]
+    },
+    "backend": {
+      "tags": []
+    },
+    "interfaces": {
+      "tags": []
+    },
+    "enums": {
+      "tags": []
+    },
+    "dto": {
+      "tags": []
+    },
+    "cms": {
+      "tags": []
+    },
+    "cms-e2e": {
+      "tags": [],
+      "implicitDependencies": ["cms"]
+    }
+  }
+}

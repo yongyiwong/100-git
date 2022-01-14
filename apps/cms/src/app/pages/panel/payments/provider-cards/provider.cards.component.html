@@ -1,0 +1,87 @@
+<nb-card>
+  <p-table #dt [value]="providerCards" styleClass="p-datatable-gridlines nb-card" [loading]="loading"
+    [scrollable]="false" scrollHeight="flex" [autoLayout]="true" [rowHover]="true" [paginator]="true" [rows]="10"
+    [(first)]="first" [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]"
+    [(selection)]="selectedCards">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <div class="p-d-flex p-ai-center">
+          <span>Provider Cards</span>
+          <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2 p-ml-5"
+            (click)="addProviderCard()"></button>
+          <button pButton pRipple [label]="Delete" icon="pi pi-trash" class="p-button-danger"
+            (click)="onDeleteSelectedCards()" [disabled]="!selectedCards || !selectedCards.length"></button>
+        </div>
+        <div>
+          <button pButton icon="pi pi-filter-slash" class="p-mr-2 p-button-outlined" (click)="clear(dt)"></button>
+          <p-button icon="pi pi-refresh" (click)="onRefresh()"></p-button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 3rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th *ngFor="let col of cols">
+          {{ col.header }}
+          <p-columnFilter *ngIf="col.field == 'paymentProviderId'" field="paymentProvider"
+            [matchMode]="'isPaymentProvider'" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Payment Provider Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="paymentProviders" placeholder="Any"
+                (onChange)="filter($event.value)" optionLabel="providerName">
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-representative-option">
+                    <span class="p-ml-1">{{option.providerName}}</span>
+                  </div>
+                </ng-template>
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-providerCard>
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="providerCard"></p-tableCheckbox>
+        </td>
+        <td>{{providerCard.paymentProvider.providerName}}</td>
+        <td>
+          {{providerCard.bank.bankName}}
+          <span style="font-size: 0.8rem; color: #6A6;">{{providerCard.bank.bankCode}}</span>
+        </td>
+        <td>{{providerCard.bankAccountName}}</td>
+        <td>{{providerCard.bankAccountNumber}}</td>
+        <td>{{providerCard.branch}}</td>
+        <td>{{providerCard.province}}</td>
+        <td>{{providerCard.city}}</td>
+        <td>{{providerCard.minAmount}}</td>
+        <td>{{providerCard.maxAmount}}</td>
+        <td>{{providerCard.maxDailyAmount}}</td>
+        <td>{{providerCard.usedDay}}</td>
+        <!-- <td>{{providerCard.maxDailyAmount - providerCards.usedDay}}</td> -->
+        <td>{{math.max(providerCard.maxDailyAmount - providerCard.usedDay, 0)}}</td>
+        <td>
+          <p-checkbox [(ngModel)]="providerCard.active" binary="true" readonly=true inputId="binary">
+          </p-checkbox>
+        </td>
+        <td>
+          <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2"
+            (click)="addProviderCard(providerCard)"></button>
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+            (click)="onDeleteProviderCard(providerCard)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+</nb-card>

@@ -1,0 +1,73 @@
+<div class="">
+  <div class="login-container">
+    <div class="login-wrapper" [ngClass]="{'shake': shakeError}">
+      <span class="login-logo">
+        <img [src]="'../../../assets/images/logo100bet.png'" alt="100bet.com">
+      </span>
+      <div class="login-wrapper-sub">
+        <form action="#" autocomplete="off" class="login-form" #form="ngForm">
+          <div class="login-input-wrapper" [ngClass]="{'notEmpty': !emptyUsername}">
+            <input class="login-input" type="text" autocomplete="off" id="loginUserName" #email="ngModel"
+              [(ngModel)]="user.email" [attr.aria-invalid]="email.invalid && email.touched ? true : null"
+              [required]="getConfigValue('forms.validation.email.required')"
+              [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : ''" autofocus fullWidth id="input-email"
+              name="email" nbInput pattern=".+@.+\..+" (focusout)="checkFields(email);" (keyup)="checkFields(email);">
+            <span class="login-focus" data-placeholder="Email / Login"></span>
+            <ng-container *ngIf="email.invalid && email.touched">
+              <p *ngIf="email.errors?.required" class="error-message">
+                This field is required.
+              </p>
+              <p *ngIf="email.errors?.pattern" class="error-message">
+                Please enter a valid e-mail.
+              </p>
+            </ng-container>
+          </div>
+          <div class="login-input-wrapper" [ngClass]="{'notEmpty': !emptyPassword}">
+            <input class="login-input" type="password" id="loginPassword" autocomplete="off" #password="ngModel"
+              [(ngModel)]="user.password" [attr.aria-invalid]="password.invalid && password.touched ? true : null"
+              [maxlength]="getConfigValue('forms.validation.password.maxLength')"
+              [minlength]="getConfigValue('forms.validation.password.minLength')"
+              [required]="getConfigValue('forms.validation.password.required')"
+              [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : ''" fullWidth id="input-password"
+              name="password" nbInput type="password" (focusout)="checkFields(password);"
+              (keyup)="checkFields(password);">
+            <span class="login-focus" data-placeholder="Password"></span>
+            <ng-container *ngIf="password.invalid && password.touched ">
+              <p *ngIf="password.errors?.required" class="error-message">
+                This field is required.
+              </p>
+            </ng-container>
+          </div>
+          <div class="login-input-wrapper" [ngClass]="{'notEmpty': !empty2facode}">
+            <input class="login-input" id="loginTwoFactorAuthenticationCode" autocomplete="off"
+              #twoFactorAuthenticationCode="ngModel" [(ngModel)]="user.twoFactorAuthenticationCode"
+              [attr.aria-invalid]="twoFactorAuthenticationCode.invalid && twoFactorAuthenticationCode.touched ? true : null"
+              [required]="true"
+              [status]="twoFactorAuthenticationCode.dirty ? (twoFactorAuthenticationCode.invalid  ? 'danger' : 'success') : ''"
+              fullWidth id="input-twoFactorAuthenticationCode" name="twoFactorAuthenticationCode" nbInput type="text"
+              (focusout)="checkFields(twoFactorAuthenticationCode);"
+              (keyup)="checkFields(twoFactorAuthenticationCode);" />
+            <span class="login-focus" data-placeholder="Authentication Code"></span>
+            <ng-container *ngIf="twoFactorAuthenticationCode.invalid &&  twoFactorAuthenticationCode.touched ">
+              <p *ngIf="twoFactorAuthenticationCode.errors?.required" class="error-message">
+                This field is required.
+              </p>
+            </ng-container>
+          </div>
+          <div class="login-btn-wrapper">
+            <div class="login-btn-sub">
+              <div class="login-btn-bg"></div>
+              <button class="login-btn" [disabled]="submitted || !form.valid" [ngClass]="{'disabledBtn': loadingButton}"
+                (click)="login()">
+                Login
+                <div *ngIf="submitted" class="button_loader"></div>
+              </button>
+            </div>
+            <span class="password-recover">Forgot your password?</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

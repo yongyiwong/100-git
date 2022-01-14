@@ -1,0 +1,30 @@
+<nb-card size="small">
+  <nb-card-header>
+    <span>Page traffic</span>
+    <nb-select [selected]="period" (selectedChange)="changePeriodAndGetData($event)">
+      <nb-option *ngFor="let period of periodType" [value]="period">{{ period.period }}</nb-option>
+    </nb-select>
+  </nb-card-header>
+  <nb-list>
+    <nb-list-item class="item" *ngFor="let item of period.dataSet; trackBy: trackByDate">
+      <span>{{ item.date }}</span>
+      <span>{{ item.value }}</span>
+      <span class="delta" [class.up]="item.delta.up" [class.down]="!item.delta.up">
+      <nb-icon [icon]="item.delta.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+        {{ item.delta.value }}%
+    </span>
+      <div class="traffic_bar">
+        <span class="value-prev caption">{{ item.comparison.prevDate }}</span>
+        <div class="progress-line-container" [style.height.%]="item.comparison.prevValue">
+          <div class="progress-line-prev"></div>
+        </div>
+        <div class="progress-line-container" [style.height.%]="item.comparison.nextValue">
+          <div class="progress-line-now" [class.success]="item.delta.up" [class.failure]="!item.delta.up">
+          </div>
+        </div>
+        <span class="value-now caption">{{ item.comparison.nextDate }}</span>
+      </div>
+
+    </nb-list-item>
+  </nb-list>
+</nb-card>

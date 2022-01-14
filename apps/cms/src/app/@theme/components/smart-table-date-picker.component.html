@@ -1,0 +1,3 @@
+<input [ngClass]="inputClass" type="date" class="form-control" [(ngModel)]="cell.newValue" [name]="cell.getId()"
+       [disabled]="!cell.isEditable()" (click)="onClick.emit($event)" (keydown.enter)="onEdited.emit($event)"
+       (keydown.esc)="onStopEditing.emit()" style="height: 35px;">

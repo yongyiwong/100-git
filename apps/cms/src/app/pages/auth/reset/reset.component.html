@@ -1,0 +1,59 @@
+<div class="">
+  <div class="register-container">
+    <div class="register-wrapper" [ngClass]="{'shake': shakeError}">
+      <span class="register-logo">
+        <img [src]="'../../../assets/images/logo100bet.png'" alt="100bet.com">
+      </span>
+      <div class="register-wrapper-sub">
+        <form (ngSubmit)="resetPass()" #resetPassForm="ngForm" aria-labelledby="title">
+          <div class="form-control-group register-input-wrapper">
+            <!-- <label class="label" for="input-password">New Password:</label> -->
+            <input nbInput [(ngModel)]="user.password" #password="ngModel" type="password" id="input-password"
+              name="password" class="register-input" autofocus fullWidth
+              [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : ''"
+              [required]="getConfigValue('forms.validation.password.required')"
+              [minlength]="getConfigValue('forms.validation.password.minLength')"
+              [maxlength]="getConfigValue('forms.validation.password.maxLength')"
+              [attr.aria-invalid]="password.invalid && password.touched ? true : null">
+            <span class="register-focus" data-placeholder="New Password"></span>
+            <ng-container *ngIf="password.invalid && password.touched">
+              <p class="error-message" *ngIf="password.errors?.required">
+                Password is required!
+              </p>
+              <p class="error-message" *ngIf="password.errors?.minlength || password.errors?.maxlength">
+                Password should contains
+                from {{getConfigValue('forms.validation.password.minLength')}}
+                to {{getConfigValue('forms.validation.password.maxLength')}}
+                characters
+              </p>
+            </ng-container>
+          </div>
+          <div class="form-group register-input-wrapper">
+            <!-- <label class="label" for="input-re-password">Confirm Password:</label> -->
+            <input nbInput [(ngModel)]="user.confirmPassword" #rePass="ngModel" id="input-re-password" name="rePass"
+              type="password" class="register-input" fullWidth [status]="rePass.touched
+                       ? (rePass.invalid || password.value != rePass.value ? 'danger' : 'success')
+                       : ''" [required]="getConfigValue('forms.validation.password.required')"
+              [attr.aria-invalid]="rePass.invalid && rePass.touched ? true : null">
+            <span class="register-focus" data-placeholder="Confirm Password"></span>
+            <ng-container *ngIf="rePass.touched">
+              <p class="error-message" *ngIf="rePass.invalid && rePass.errors?.required">
+                Password confirmation is required!
+              </p>
+              <p class="error-message" *ngIf="password.value != rePass.value && !rePass.errors?.required">
+                Password does not match the confirm password.
+              </p>
+            </ng-container>
+          </div>
+
+          <button nbButton status="success" fullWidth [disabled]="submitted || !resetPassForm.valid"
+            [class.btn-pulse]="submitted">
+            Change password
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>

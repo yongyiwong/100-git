@@ -1,0 +1,139 @@
+<nb-card>
+  <p-table #dt [value]="depositOrders" styleClass="p-datatable-gridlines p-datatable-customers nb-card"
+    [rowHover]="true" [paginator]="true" [rows]="10" [(first)]="first" [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]"
+    [loading]="loading" [scrollable]="false" scrollHeight="flex" [autoLayout]="true">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <div class="p-d-flex p-ai-center">
+          DepositOrders
+          <p-button pTooltip="manual deposit" tooltipPosition="top" label="Manual" icon="pi pi-plus"
+            class="p-mr-2 p-ml-5" (click)="addManualOrder()">
+          </p-button>
+
+        </div>
+        <div>
+          <button pButton icon="pi pi-filter-slash" class="p-mr-2 p-button-outlined" (click)="clear(dt)"></button>
+          <p-button icon="pi pi-refresh" (click)="onRefresh()"></p-button>
+        </div>
+
+        <!-- <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            (input)="dt.filterGlobal($event.target.value, 'contains')"
+            placeholder="Global Search"
+          />
+        </span> -->
+      </div>
+    </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of cols" [ngStyle]="{'width': col.width ? col.width: '' }">
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">
+          {{ col.header }}
+          <p-columnFilter *ngIf="col.field == 'userId'" type="text" field="userId" display="menu"></p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'paymentProviderId'" field="paymentProvider"
+            [matchMode]="'isPaymentProvider'" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Payment Provider Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="paymentProviders" placeholder="Any"
+                (onChange)="filter($event.value)" optionLabel="providerName">
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-representative-option">
+                    <span class="p-ml-1">{{option.providerName}}</span>
+                  </div>
+                </ng-template>
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'paymentProviderChannelId'" field="channel"
+            [matchMode]="'isPaymentProviderChannel'" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Channel Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="channels" placeholder="Any" (onChange)="filter($event.value)"
+                optionLabel="channelName">
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-representative-option">
+                    <span class="p-ml-1">{{option.channelName}}</span>
+                  </div>
+                </ng-template>
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'date'" field="orderDate" display="menu" type="date"
+            [showMatchModes]="true" [showOperator]="false"></p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'status'" field="status" matchMode="in" display="menu"
+            [showMatchModes]="false" [showOperator]="false" [showAddButton]="false" class="p-ml-auto">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Status Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="statuses" placeholder="Any" (onChange)="filter($event.value)"
+                optionLabel="name" optionValue="name">
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'amount'" type="numeric" field="amount" display="menu" class="p-ml-auto">
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'providerOrderId'" type="numeric" field="providerOrderId" display="menu"
+            class="p-ml-auto">
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'orderId'" type="numeric" field="orderId" display="menu"
+            class="p-ml-auto">
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'userName'" type="text" field="userName" display="menu"></p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'last4Digit'" type="text" field="last4Digit" display="menu">
+          </p-columnFilter>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+      <tr>
+        <td>{{order.userId}}</td>
+        <td>{{formatDate(order.date)}}</td>
+        <td>{{order.amount}}</td>
+        <td>{{order.status}}</td>
+        <td>{{order.orderId}}</td>
+        <td>{{order.paymentProvider.providerName}}</td>
+        <td>
+          <span style="white-space: nowrap;">{{order.channel.channelName}}</span><br>
+          <span style="font-size: 0.8rem; color: #6A6;">{{order.paymentProviderChannel.providerChannelName}}</span>
+        </td>
+        <td><span [ngStyle]="{'word-break': 'break-all'}">{{order.providerOrderId}}</span></td>
+        <td>{{order.userName}}</td>
+        <td>{{order.last4Digit}}</td>
+        <td>
+          <button pTooltip="manual deposit" tooltipPosition="top" *ngIf="order.status == 'failed'" pButton pRipple
+            icon="pi pi-plus" class="p-button-rounded p-button-info  p-mr-1" (click)="addManualOrder(order)"></button>
+          <button pTooltip="make it success" tooltipPosition="top"
+            *ngIf="order.status == 'failed' || order.paymentProvider.isOnlyCardSupport && order.status == 'readyToPay'"
+            pButton pRipple icon="pi pi-check-circle" class="p-button-rounded p-button-info p-mr-1"
+            (click)="makeItSuccess(order)"></button>
+          <button pTooltip="copy bank info" tooltipPosition="top" pButton pRipple icon="pi pi-clone"
+            class="p-button-rounded p-button-info" (click)="copyBankInfoToClipboard(order)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text">
+  </p-confirmDialog>
+</nb-card>

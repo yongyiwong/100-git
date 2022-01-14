@@ -1,0 +1,22 @@
+::ng-deep ng2-smart-table {
+  white-space: nowrap;
+
+  .ng2-smart-sort-link {
+    color: white;
+  }
+  .form-control {
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.375em 0.75em;
+    width: 100%;
+  }
+  .ng2-smart-sort-link {
+    color: white !important;
+  }
+  .nb-edit {
+    font-size: 15px !important;
+  }
+  .form-control:disabled {
+    background-color: grey;
+  }
+}

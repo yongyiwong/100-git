@@ -1,0 +1,160 @@
+<nb-card>
+  <nb-card-header>
+    Home Banners
+  </nb-card-header>
+  <nb-card-body>
+    <nb-accordion *ngFor="let slide of slides | async;">
+      <nb-accordion-item>
+        <nb-accordion-item-header>
+          {{slide.title}}
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <nb-tabset>
+            <nb-tab tabTitle="Desktop" cdkDropListGroup>
+              <nb-card class="home-banner-tab-container">
+                <nb-card class="home-banner-card-wrapper">
+                  <nb-card class="home-banner-card">
+                    <img cdkDropList src="https://100100188.com/assets/images/carousel/baner.png" alt=""
+                         class="home-banner-tab-container-image">
+
+                    <button cdkDrag (cdkDragEnded)="setPosition($event)" type=submit class="drag-button"
+                            cdkDragBoundary=".home-banner-card"
+                            [style.background-color]="buttonBackgroundColor"
+                            [style.width.px]="buttonWidth"
+                            [style.height.px]="buttonHeight"
+                            [style.font-family]="buttonFont"
+                            [style.font-size.px]="buttonFontSize"
+                            >{{buttonText}}
+                    </button>
+                  </nb-card>
+                </nb-card>
+
+                <nb-card class="home-banner-upload-wrapper">
+                  <form action="#" method="POST" (ngSubmit)="submit()" [formGroup]="heroBannerForm">
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Title:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input #title formControlName="title" class="update-input" type="text" nbInput status="primary"
+                               placeholder="{{slide.title}}">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Order:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="order" class="update-input" type="text" nbInput status="danger"
+                               placeholder="{{slide.order}}">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Button Text:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="buttonText" id="buttonText" class="update-input" type="text"
+                               nbInput
+                               status="success"
+                               placeholder="{{slide.buttonText}}"
+                               value="{{slide.buttonText}}"
+                               (ngModelChange)="buttonTextChange($event)">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Button Color:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="buttonColor" class="update-input" type="text"
+                               [(colorPicker)]="buttonBackgroundColor"
+                               [style.background]="buttonBackgroundColor">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Position X:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionX" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.positionX}}">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Position Y:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionY" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.positionY}}">
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Button Height:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionY" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.buttonHeight}}"
+                               (ngModelChange)="buttonHeightChange($event)"
+                        >
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Button Width:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionY" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.buttonWidth}}"
+                               (ngModelChange)="buttonWidthChange($event)"
+                        >
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Button Font:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionY" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.fontType}}"
+                               (ngModelChange)="buttonFontChange($event)"
+                        >
+                      </div>
+                    </div>
+                    <div class="update-group">
+                      <div class="update-label-div">
+                        <label class="update-label">Font Size:</label>
+                      </div>
+                      <div class="update-input-div">
+                        <input formControlName="positionY" class="update-input" type="text" nbInput
+                               status="warning"
+                               placeholder="{{slide.fontSize}}"
+                               (ngModelChange)="buttonFontSizeChange($event)"
+                        >
+                      </div>
+                    </div>
+                    <nb-card class="banner-submit">
+                      <nb-toggle #enabled formControlName="enabled" class="banner-submit-toggle" status="warning">
+                        Enable
+                      </nb-toggle>
+                      <button type=submit class="banner-submit-button" nbButton status="primary">Next</button>
+                    </nb-card>
+                  </form>
+                </nb-card>
+              </nb-card>
+            </nb-tab>
+            <nb-tab tabTitle="Mobile">
+            </nb-tab>
+          </nb-tabset>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+    </nb-accordion>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,84 @@
+<nb-card>
+  <!-- <nb-card-header> Payment Provider Channels </nb-card-header>
+  <nb-card-body nbSpinnerStatus="basic" class="payment-card-body">
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="providerChannelsData"
+      (editConfirm)="onConfirmEdit($event)"
+    ></ng2-smart-table>
+  </nb-card-body> -->
+  <p-table #dt [value]="providerChannels" styleClass="p-datatable-gridlines nb-card" [loading]="loading"
+    [scrollable]="false" scrollHeight="flex" [autoLayout]="true" [rowHover]="true" [paginator]="true" [rows]="10"
+    [(first)]="first" [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]"
+    (onEditComplete)="onEditComplete($event)">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <div class="p-d-flex p-ai-center">
+          <span>Provider Channels</span>
+          <p-button label="Save" icon="pi pi-save" class="p-ml-5 " [disabled]="loading" (onClick)="onClickSave()">
+          </p-button>
+        </div>
+        <div>
+          <button pButton icon="pi pi-filter-slash" class="p-mr-2 p-button-outlined" (click)="clear(dt)"></button>
+          <p-button icon="pi pi-refresh" (click)="onRefresh()"></p-button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">
+          {{ col.header }}
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-providerChannel>
+      <tr>
+        <td>{{providerChannel.paymentProvider.providerName}}</td>
+        <td>
+          <span style="white-space: nowrap;">{{providerChannel.providerChannelName}}</span><br>
+          <span style="font-size: 0.8rem; color: #6A6;">{{providerChannel.channel.channelName}}</span>
+        </td>
+        <td [pEditableColumn]="providerChannel">
+          <p-cellEditor *ngIf="!providerChannel.isMinMaxAuto">
+            <ng-template pTemplate="input">
+              <p-inputNumber [(ngModel)]="providerChannel.providerMinAmount" required [useGrouping]="false">
+              </p-inputNumber>
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{providerChannel.providerMinAmount}}
+            </ng-template>
+          </p-cellEditor>
+          <span *ngIf="providerChannel.isMinMaxAuto">{{providerChannel.providerMinAmount}}</span>
+        </td>
+        <td [pEditableColumn]="providerChannel">
+          <p-cellEditor *ngIf="!providerChannel.isMinMaxAuto">
+            <ng-template pTemplate="input">
+              <p-inputNumber [(ngModel)]="providerChannel.providerMaxAmount" required [useGrouping]="false">
+              </p-inputNumber>
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{providerChannel.providerMaxAmount}}
+            </ng-template>
+          </p-cellEditor>
+          <span *ngIf="providerChannel.isMinMaxAuto">{{providerChannel.providerMaxAmount}}</span>
+        </td>
+        <td>
+          <p-checkbox [(ngModel)]="providerChannel.isActive" binary="true" inputId="binary"
+            (onChange)="onChangeActive(providerChannel)">
+          </p-checkbox>
+        </td>
+        <td>
+          <p-checkbox [(ngModel)]="providerChannel.isAvailable" binary="true" readonly=true inputId="binary">
+          </p-checkbox>
+        </td>
+        <td>{{formatDate(providerChannel.testedAt)}}</td>
+        <td>
+          <button pTooltip="test deposit" tooltipPosition="top" pButton pRipple icon="pi pi-angle-right"
+            class="p-button-rounded p-button-info" (click)="testDeposit(providerChannel)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</nb-card>

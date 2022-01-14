@@ -1,0 +1,1522 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>100bet documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">100bet documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BetSlipComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>workspace-bet-slip</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./bet-slip.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./bet-slip.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allChecked">allChecked</a>
+                            </li>
+                            <li>
+                                <a href="#betSlipSettings">betSlipSettings</a>
+                            </li>
+                            <li>
+                                <a href="#betSystem">betSystem</a>
+                            </li>
+                            <li>
+                                <a href="#confirmDelete">confirmDelete</a>
+                            </li>
+                            <li>
+                                <a href="#openedTab">openedTab</a>
+                            </li>
+                            <li>
+                                <a href="#openSettings">openSettings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeSettings">changeSettings</a>
+                            </li>
+                            <li>
+                                <a href="#changeSettingsState">changeSettingsState</a>
+                            </li>
+                            <li>
+                                <a href="#checkUncheckAll">checkUncheckAll</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#removeAllPicks">removeAllPicks</a>
+                            </li>
+                            <li>
+                                <a href="#removeThatPick">removeThatPick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#pickedItems">pickedItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(betSlipService: <a href="../injectables/BetSlipService.html">BetSlipService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>betSlipService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BetSlipService.html" target="_self" >BetSlipService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pickedItems"></a>
+                        <b>pickedItems</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeSettings"></a>
+                    <span class="name">
+                        <b>
+                            changeSettings
+                        </b>
+                        <a href="#changeSettings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeSettings(what, newVal)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>what</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>newVal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeSettingsState"></a>
+                    <span class="name">
+                        <b>
+                            changeSettingsState
+                        </b>
+                        <a href="#changeSettingsState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeSettingsState(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkUncheckAll"></a>
+                    <span class="name">
+                        <b>
+                            checkUncheckAll
+                        </b>
+                        <a href="#checkUncheckAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkUncheckAll()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeAllPicks"></a>
+                    <span class="name">
+                        <b>
+                            removeAllPicks
+                        </b>
+                        <a href="#removeAllPicks"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeAllPicks(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeThatPick"></a>
+                    <span class="name">
+                        <b>
+                            removeThatPick
+                        </b>
+                        <a href="#removeThatPick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeThatPick(pick)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pick</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allChecked"></a>
+                        <span class="name">
+                            <b>
+                            allChecked</b>
+                            <a href="#allChecked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="betSlipSettings"></a>
+                        <span class="name">
+                            <b>
+                            betSlipSettings</b>
+                            <a href="#betSlipSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="betSystem"></a>
+                        <span class="name">
+                            <b>
+                            betSystem</b>
+                            <a href="#betSystem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="confirmDelete"></a>
+                        <span class="name">
+                            <b>
+                            confirmDelete</b>
+                            <a href="#confirmDelete"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openedTab"></a>
+                        <span class="name">
+                            <b>
+                            openedTab</b>
+                            <a href="#openedTab"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openSettings"></a>
+                        <span class="name">
+                            <b>
+                            openSettings</b>
+                            <a href="#openSettings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-slip/bet-slip.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, Input, OnChanges, OnInit, SimpleChanges} from &#x27;@angular/core&#x27;;
+import {BetSlipService} from &quot;../../../shared/services/bet-slip/bet-slip.service&quot;;
+
+
+@Component({
+  selector: &#x27;workspace-bet-slip&#x27;,
+  templateUrl: &#x27;./bet-slip.component.html&#x27;,
+  styleUrls: [&#x27;./bet-slip.component.scss&#x27;]
+})
+export class BetSlipComponent implements OnInit, OnChanges {
+
+  @Input() pickedItems: any;
+
+
+  betSystem: number;
+  confirmDelete: boolean;
+  openSettings: boolean;
+  betSlipSettings: any;
+  openedTab: string;
+  allChecked: boolean;
+
+  constructor(private betSlipService: BetSlipService) {
+
+
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+
+    if (changes[&#x27;pickedItems&#x27;] &amp;&amp; changes[&#x27;pickedItems&#x27;].currentValue) {
+      this.betSlipSettings &#x3D; this.betSlipService.getBetSlipFromLocalStorage();
+      this.pickedItems.length &#x3D;&#x3D;&#x3D; this.pickedItems.filter(e &#x3D;&gt; e.selected).length ? this.allChecked &#x3D; true : this.allChecked &#x3D; false;
+    }
+
+  }
+
+  ngOnInit(): void {
+    this.betSlipSettings &#x3D; this.betSlipService.getBetSlipFromLocalStorage();
+    switch (this.betSlipSettings.type) {
+      case &#x27;Single&#x27;:
+        this.betSystem &#x3D; 0;
+        break;
+      case &#x27;Multi&#x27;:
+        this.betSystem &#x3D; 1;
+        break;
+      case &#x27;System&#x27;:
+        this.betSystem &#x3D; 2;
+        break;
+      default:
+        this.betSystem &#x3D; 0;
+        break;
+    }
+    this.openSettings &#x3D; false;
+
+    this.pickedItems.length &#x3D;&#x3D;&#x3D; this.pickedItems.filter(e &#x3D;&gt; e.selected).length ? this.allChecked &#x3D; true : this.allChecked &#x3D; false;
+
+  }
+
+  changeSettings(what, newVal) {
+    this.betSlipService.changeSetSlipObject(what, newVal);
+  }
+
+  changeSettingsState(e) {
+    this.openSettings &#x3D; e;
+  }
+
+  removeThatPick(pick) {
+    console.log(pick)
+  }
+
+  removeAllPicks(e) {
+    if (e.currentTarget.classList.contains(&#x27;confirm_delete&#x27;)) {
+      this.pickedItems &#x3D; [];
+      this.betSlipService.changeSetSlipObject(&#x27;picks&#x27;, this.pickedItems)
+    } else {
+      this.confirmDelete &#x3D; true;
+    }
+  }
+
+  checkUncheckAll() {
+    if (this.allChecked) {
+      this.allChecked &#x3D; false;
+      this.pickedItems.filter(e &#x3D;&gt; e.selected &#x3D; false);
+    } else {
+      this.allChecked &#x3D; true;
+      this.pickedItems.filter(e &#x3D;&gt; e.selected &#x3D; true);
+    }
+    this.betSlipService.changeSetSlipObject(&#x27;picks&#x27;, this.pickedItems)
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bet__slip_wrapper&quot; *ngIf&#x3D;&quot;pickedItems.length&quot;&gt;
+  &lt;ul class&#x3D;&quot;bet__slip-tab-bar&quot;&gt;
+    &lt;li&gt;
+      &lt;button (click)&#x3D;&quot;betSystem &#x3D; 0; changeSettings(&#x27;type&#x27;, &#x27;Single&#x27;)&quot; [ngClass]&#x3D;&quot;{&#x27;__is_active&#x27; : betSystem &#x3D;&#x3D;&#x3D; 0}&quot;&gt;Single&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;button [disabled]&#x3D;&quot;pickedItems.length &lt; 2&quot; (click)&#x3D;&quot;betSystem &#x3D; 1; ; changeSettings(&#x27;type&#x27;, &#x27;Multi&#x27;)&quot;
+              [ngClass]&#x3D;&quot;{&#x27;__is_active&#x27; : betSystem &#x3D;&#x3D;&#x3D; 1}&quot;&gt;Multi
+      &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;button [disabled]&#x3D;&quot;pickedItems.length &lt; 3&quot; (click)&#x3D;&quot;betSystem &#x3D; 2; ; changeSettings(&#x27;type&#x27;, &#x27;System&#x27;)&quot;
+              [ngClass]&#x3D;&quot;{&#x27;__is_active&#x27; : betSystem &#x3D;&#x3D;&#x3D; 2}&quot;&gt;System
+      &lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class&#x3D;&quot;bet__slip-picks&quot;&gt;
+    &lt;workspace-bet-slip-single *ngIf&#x3D;&quot;betSystem &#x3D;&#x3D;&#x3D; 0&quot; [pickedItems]&#x3D;&quot;pickedItems&quot;&gt;&lt;/workspace-bet-slip-single&gt;
+    &lt;workspace-bet-slip-multi *ngIf&#x3D;&quot;betSystem &#x3D;&#x3D;&#x3D; 1&quot; [pickedItems]&#x3D;&quot;pickedItems&quot;&gt;&lt;/workspace-bet-slip-multi&gt;
+    &lt;workspace-bet-slip-system *ngIf&#x3D;&quot;betSystem &#x3D;&#x3D;&#x3D; 2&quot; [pickedItems]&#x3D;&quot;pickedItems&quot;&gt;&lt;/workspace-bet-slip-system&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;bet__slip_summary_wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;bet__slip_settings_bar&quot;&gt;
+      &lt;div class&#x3D;&quot;bet__slip_settings_select_all&quot; *ngIf&#x3D;&quot;!openSettings&quot;&gt;
+        &lt;input type&#x3D;&quot;checkbox&quot; [checked]&#x3D;&quot;allChecked&quot; (change)&#x3D;&quot;checkUncheckAll()&quot;&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;span class&#x3D;&quot;summary_button&quot; (click)&#x3D;&quot;openSettings &#x3D; true;&quot; *ngIf&#x3D;&quot;!openSettings&quot;&gt;&lt;i
+        class&#x3D;&quot;fas fa-cog&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class&#x3D;&quot;summary_button remove__picks_button&quot; [ngClass]&#x3D;&quot;{&#x27;confirm_delete&#x27;: confirmDelete}&quot;
+              (click)&#x3D;&quot;removeAllPicks($event)&quot;
+              (clickOutside)&#x3D;&quot;confirmDelete &#x3D; false;&quot;
+              *ngIf&#x3D;&quot;!openSettings&quot;&gt;
+        &lt;span class&#x3D;&quot;remove__picks_button_icon&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class&#x3D;&quot;remove__picks_button_text&quot;&gt;Confirm delete all&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;workspace-bet-slip-settings *ngIf&#x3D;&quot;openSettings&quot;
+                                   (isCloseSettings)&#x3D;&quot;changeSettingsState($event)&quot;&gt;&lt;/workspace-bet-slip-settings&gt;
+    &lt;/div&gt;
+    &lt;!--        &lt;workspace-stake-numpad&gt;&lt;/workspace-stake-numpad&gt;--&gt;
+    &lt;div class&#x3D;&quot;bet__slip_stake_wrap&quot;&gt;
+      &lt;span&gt;Stake&lt;b&gt;2Bets&lt;/b&gt;&lt;/span&gt;
+      &lt;input class&#x3D;&quot;input__stake&quot; type&#x3D;&quot;number&quot; value&#x3D;&quot;10&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;bet__slip_possible_return&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;Total Stake:&lt;/span&gt;
+        &lt;span&gt;30&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;b&gt;Possible Return&lt;/b&gt;
+        &lt;span&gt;69&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;bet__slip_summary&quot;&gt;
+      &lt;span class&#x3D;&quot;bet__slip_summary_disclaimer&quot;&gt;
+        You are accepting all higher odds, click &lt;span (click)&#x3D;&quot;openSettings &#x3D; !openSettings;&quot;&gt;Setting&lt;/span&gt; to change
+      &lt;/span&gt;
+      &lt;span class&#x3D;&quot;btn__solid place__bet&quot;&gt;Place bet&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;div *ngIf&#x3D;&quot;!pickedItems.length&quot; style&#x3D;&quot;padding: 15px;  font-weight: bold;&quot;&gt;
+  No bets selected!&lt;br/&gt;
+  Please browse our sportsbook and select bets by tapping on the odds
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./bet-slip.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../mixins&quot;;
+
+.bet__slip_wrapper {
+  .bet__slip-tab-bar {
+    border-bottom: 1px solid #1e1e1e;
+    display: flex;
+
+    li {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      text-align: center;
+      height: 45px;
+      line-height: 45px;
+
+      button {
+        padding: 0 22px;
+        color: var(--plain-white);
+        font-size: 1.143rem;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        &amp;[disabled] {
+          opacity: .5;
+          pointer-events: none;
+        }
+
+        &amp;:before {
+          content: &#x27;&#x27;;
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: var(--yellow);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        &amp;.__is_active, &amp;:hover {
+          &amp;:before {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+          }
+
+        }
+      }
+    }
+  }
+
+  .bet__slip-picks {
+    background: #292929;
+
+    ::ng-deep .bet__slip-picks_wrapper {
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+
+      ::ng-deep .bet__slip-pick {
+        border-bottom: 1px solid #1e1e1e;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        max-height: 95px;
+        min-height: 95px;
+
+
+        .bet__slip-pick_remove_wrapper {
+          margin-left: 15px;
+
+          .bet__slip-pick_remove {
+            cursor: pointer;
+            color: #73767e;
+            transition: all 0.3s ease;
+            font-size: 19px;
+
+            &amp;:hover {
+              opacity: 1;
+              transition: all 0.3s ease;
+            }
+          }
+
+        }
+
+        .bet__slip-pick_infos {
+          padding-left: 15px;
+
+          .bet__slip-pick_infos_selected {
+            color: #dddddd;
+            font-size: rem-calc(15);
+            margin-bottom: 5px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+
+            .badge {
+              margin-left: 15px;
+            }
+          }
+
+          .bet__slip-pick_infos_res {
+            color: #73767e;
+            line-height: 15px;
+            font-size: rem-calc(13);
+            margin-bottom: 5px;
+          }
+
+          .bet__slip-pick_infos_teams {
+            color: #dddddd;
+            line-height: 17px;
+          }
+        }
+
+        .bet__slip-pick_stake {
+          margin-left: auto;
+          display: flex;
+          flex-direction: column;
+
+          .bet__slip_odds {
+            height: 28px;
+            width: 58px;
+            color: var(--text-color);
+            font-family: var(--roboto-regular);
+            font-size: rem-calc(15);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &amp;.odds__up {
+              background-color: rgba(54, 255, 54, 0.15);
+              -webkit-box-shadow: inset 0px 0px 0px 1px #36ff36;
+              -moz-box-shadow: inset 0px 0px 0px 1px #36ff36;
+              box-shadow: inset 0px 0px 0px 1px #36ff36;
+              color: #36ff36;
+
+              &amp;:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 5px 5px 5px;
+                border-color: transparent transparent var(--green) transparent;
+              }
+            }
+
+            &amp;.odds__down {
+              background-color: rgba(255, 54, 54, 0.15);
+              -webkit-box-shadow: inset 0px 0px 0px 1px #ff3636;
+              -moz-box-shadow: inset 0px 0px 0px 1px #ff3636;
+              box-shadow: inset 0px 0px 0px 1px #ff3636;
+              color: #ff3636;
+
+              &amp;:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 5px 0 5px;
+                border-color: var(--red) transparent transparent transparent;
+              }
+
+
+            }
+
+            &amp;:before {
+              content: &#x27;&#x27;;
+              display: inline-block;
+              margin-right: 5px;
+            }
+          }
+
+          input.input__stake {
+            margin-top: 5px;
+            height: 28px;
+            width: 58px;
+            border: 1px solid #404040;
+            background: #404040;
+            text-align: right;
+            padding-right: 10px;
+            color: var(--plain-white);
+            -moz-appearance: textfield;
+
+            &amp;::-webkit-outer-spin-button, &amp;::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .bet__slip_settings_bar {
+    padding: 0 15px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #292929;
+    border-bottom: 1px solid #1e1e1e;
+
+    &amp; &gt; div {
+      display: flex;
+      align-items: center;
+    }
+
+    .summary_button {
+      height: 28px;
+      min-width: 28px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+      background: #414654;
+      border-radius: var(--radius-base);
+      margin-left: 8px;
+      cursor: pointer;
+      color: var(--plain-white);
+      text-align: center;
+      line-height: 28px;
+      transition: all 0.3s ease;
+
+      &amp;:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
+      }
+
+      &amp;.remove__picks_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .remove__picks_button_icon {
+          width: 28px;
+          height: 28px;
+          text-align: center;
+        }
+
+        &amp;.confirm_delete {
+          background: var(--yellow);
+          box-shadow: none;
+          color: #414654;
+          .remove__picks_button_text {
+            width: 120px;
+          }
+        }
+
+        .remove__picks_button_text {
+          width: 0;
+          white-space: nowrap;
+          transition: all 0.3s ease;
+          overflow: hidden;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .bet__slip_stake_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #1e1e1e;
+
+    input {
+      height: 40px;
+      background: #292929;
+      border-radius: var(--radius-base);
+      border: 1px solid #3f444e;
+      text-align: right;
+      padding: 0 8px;
+      width: 65px;
+      -moz-appearance: textfield;
+      color: var(--plain-white);
+
+      &amp;::-webkit-outer-spin-button, &amp;::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    span {
+      font-size: rem-calc(14);
+      line-height: 17px;
+      color: #8a8a8a;
+
+      b {
+        line-height: 18px;
+        font-family: var(--roboto-bold);
+        font-size: rem-calc(15);
+        display: block;
+        color: var(--plain-white);
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .bet__slip_possible_return {
+
+    padding: 15px;
+    border-bottom: 1px solid #1e1e1e;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &amp;:first-child {
+        margin-bottom: 4px;
+
+        span {
+          &amp;:first-child {
+            color: #8a8a8a;
+          }
+
+        }
+      }
+
+      span {
+        font-size: rem-calc(14);
+        line-height: 17px;
+      }
+
+      b {
+        line-height: 18px;
+        font-family: var(--roboto-bold);
+        font-size: rem-calc(15);
+      }
+    }
+
+  }
+
+  .bet__slip_summary_wrapper {
+    padding-bottom: 25px;
+  }
+
+  .bet__slip_summary {
+    padding: 0 15px;
+
+    &amp;_disclaimer {
+      display: block;
+      text-align: center;
+      min-height: 28px;
+      line-height: 28px;
+      font-size: rem-calc(12);
+      color: #6d6d6b;
+      margin: 10px 0;
+
+      span {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .place__bet {
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      height: 47px;
+      line-height: 45px;
+      &amp;:hover {
+        border-color: var(--yellow);
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="bet__slip_wrapper" *ngIf="pickedItems.length">  <ul class="bet__slip-tab-bar">    <li>      <button (click)="betSystem = 0; changeSettings(\'type\', \'Single\')" [ngClass]="{\'__is_active\' : betSystem === 0}">Single</button>    </li>    <li>      <button [disabled]="pickedItems.length < 2" (click)="betSystem = 1; ; changeSettings(\'type\', \'Multi\')"              [ngClass]="{\'__is_active\' : betSystem === 1}">Multi      </button>    </li>    <li>      <button [disabled]="pickedItems.length < 3" (click)="betSystem = 2; ; changeSettings(\'type\', \'System\')"              [ngClass]="{\'__is_active\' : betSystem === 2}">System      </button>    </li>  </ul>  <div class="bet__slip-picks">    <workspace-bet-slip-single *ngIf="betSystem === 0" [pickedItems]="pickedItems"></workspace-bet-slip-single>    <workspace-bet-slip-multi *ngIf="betSystem === 1" [pickedItems]="pickedItems"></workspace-bet-slip-multi>    <workspace-bet-slip-system *ngIf="betSystem === 2" [pickedItems]="pickedItems"></workspace-bet-slip-system>  </div>  <div class="bet__slip_summary_wrapper">    <div class="bet__slip_settings_bar">      <div class="bet__slip_settings_select_all" *ngIf="!openSettings">        <input type="checkbox" [checked]="allChecked" (change)="checkUncheckAll()">      </div>      <div>        <span class="summary_button" (click)="openSettings = true;" *ngIf="!openSettings"><i        class="fas fa-cog"></i></span>        <span class="summary_button remove__picks_button" [ngClass]="{\'confirm_delete\': confirmDelete}"              (click)="removeAllPicks($event)"              (clickOutside)="confirmDelete = false;"              *ngIf="!openSettings">        <span class="remove__picks_button_icon"><i class="fas fa-trash-alt"></i></span>        <span class="remove__picks_button_text">Confirm delete all</span>      </span>      </div>      <workspace-bet-slip-settings *ngIf="openSettings"                                   (isCloseSettings)="changeSettingsState($event)"></workspace-bet-slip-settings>    </div>    <!--        <workspace-stake-numpad></workspace-stake-numpad>-->    <div class="bet__slip_stake_wrap">      <span>Stake<b>2Bets</b></span>      <input class="input__stake" type="number" value="10"/>    </div>    <div class="bet__slip_possible_return">      <div>        <span>Total Stake:</span>        <span>30</span>      </div>      <div>        <b>Possible Return</b>        <span>69</span>      </div>    </div>    <div class="bet__slip_summary">      <span class="bet__slip_summary_disclaimer">        You are accepting all higher odds, click <span (click)="openSettings = !openSettings;">Setting</span> to change      </span>      <span class="btn__solid place__bet">Place bet</span>    </div>  </div></div><div *ngIf="!pickedItems.length" style="padding: 15px;  font-weight: bold;">  No bets selected!<br/>  Please browse our sportsbook and select bets by tapping on the odds</div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'workspace-root'},{'name': 'AsianHandicapComponent', 'selector': 'workspace-asian-handicap'},{'name': 'BetColumnComponent', 'selector': 'workspace-bet-column'},{'name': 'BetSlipComponent', 'selector': 'workspace-bet-slip'},{'name': 'BetSlipMultiComponent', 'selector': 'workspace-bet-slip-multi'},{'name': 'BetSlipSettingsComponent', 'selector': 'workspace-bet-slip-settings'},{'name': 'BetSlipSingleComponent', 'selector': 'workspace-bet-slip-single'},{'name': 'BetSlipSystemComponent', 'selector': 'workspace-bet-slip-system'},{'name': 'BreadcrumbsComponent', 'selector': 'workspace-breadcrumbs'},{'name': 'CarouselComponent', 'selector': 'workspace-carousel'},{'name': 'CarouselCounterComponent', 'selector': 'workspace-carousel-counter'},{'name': 'CasinoComponent', 'selector': 'workspace-casino'},{'name': 'CasinoGamesComponent', 'selector': 'workspace-casino-games'},{'name': 'FeaturedComponent', 'selector': 'workspace-featured'},{'name': 'FixturesMatchesComponent', 'selector': 'workspace-fixtures-matches'},{'name': 'FixturesOutrightsComponent', 'selector': 'workspace-fixtures-outrights'},{'name': 'FixturesPageComponent', 'selector': 'workspace-fixtures-page'},{'name': 'FixturesStandingsComponent', 'selector': 'workspace-fixtures-standings'},{'name': 'HomeComponent', 'selector': 'workspace-home'},{'name': 'InPlayBannerComponent', 'selector': 'workspace-in-play-banner'},{'name': 'InPlayComponent', 'selector': 'workspace-in-play'},{'name': 'InPlayPageComponent', 'selector': 'workspace-in-play-page'},{'name': 'LeftColumnNavComponent', 'selector': 'workspace-left-column-nav'},{'name': 'LiveEventComponent', 'selector': 'workspace-live-event'},{'name': 'MatchResultsComponent', 'selector': 'workspace-match-results'},{'name': 'MyBetsAllComponent', 'selector': 'workspace-my-bets-all'},{'name': 'MyBetsCashOutComponent', 'selector': 'workspace-my-bets-cash-out'},{'name': 'MyBetsComponent', 'selector': 'workspace-my-bets'},{'name': 'MyBetsLiveNowComponent', 'selector': 'workspace-my-bets-live-now'},{'name': 'MyBetsSettledComponent', 'selector': 'workspace-my-bets-settled'},{'name': 'MyBetsUnsettledComponent', 'selector': 'workspace-my-bets-unsettled'},{'name': 'NavigationComponent', 'selector': 'workspace-navigation'},{'name': 'OhbSelectComponent', 'selector': 'workspace-ohb-select'},{'name': 'PopularBetsComponent', 'selector': 'workspace-popular-bets'},{'name': 'SportsPageComponent', 'selector': 'workspace-sports-page'},{'name': 'StakeNumpadComponent', 'selector': 'workspace-stake-numpad'},{'name': 'TotalGoalsComponent', 'selector': 'workspace-total-goals'},{'name': 'UpcomingComponent', 'selector': 'workspace-upcoming'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BetSlipComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BetSlipComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

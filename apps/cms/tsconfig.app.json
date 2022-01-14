@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "target": "es2015",
+    "types": []
+  },
+  "files": ["src/main.ts", "src/polyfills.ts", "src/typings.d.ts"]
+}

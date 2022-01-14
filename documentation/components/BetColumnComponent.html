@@ -1,0 +1,838 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>100bet documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">100bet documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BetColumnComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/frontend/src/app/components/bet-column/bet-column.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>workspace-bet-column</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./bet-column.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./bet-column.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addPickToCart">addPickToCart</a>
+                            </li>
+                            <li>
+                                <a href="#betSlipCartChanged">betSlipCartChanged</a>
+                            </li>
+                            <li>
+                                <a href="#betslipTabVisibility">betslipTabVisibility</a>
+                            </li>
+                            <li>
+                                <a href="#betSlipV2">betSlipV2</a>
+                            </li>
+                            <li>
+                                <a href="#myBetsTabVisibility">myBetsTabVisibility</a>
+                            </li>
+                            <li>
+                                <a href="#pickedItems">pickedItems</a>
+                            </li>
+                            <li>
+                                <a href="#removePickFromCart">removePickFromCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#subscriptionsService">subscriptionsService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeBetTab">changeBetTab</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(subscriptionsService: <a href="../injectables/SubscriptionsService.html">SubscriptionsService</a>, betSlipService: <a href="../injectables/BetSlipService.html">BetSlipService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>subscriptionsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SubscriptionsService.html" target="_self" >SubscriptionsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>betSlipService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BetSlipService.html" target="_self" >BetSlipService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeBetTab"></a>
+                    <span class="name">
+                        <b>
+                            changeBetTab
+                        </b>
+                        <a href="#changeBetTab"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeBetTab(tab, e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tab</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addPickToCart"></a>
+                        <span class="name">
+                            <b>
+                            addPickToCart</b>
+                            <a href="#addPickToCart"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="betSlipCartChanged"></a>
+                        <span class="name">
+                            <b>
+                            betSlipCartChanged</b>
+                            <a href="#betSlipCartChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="betslipTabVisibility"></a>
+                        <span class="name">
+                            <b>
+                            betslipTabVisibility</b>
+                            <a href="#betslipTabVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="betSlipV2"></a>
+                        <span class="name">
+                            <b>
+                            betSlipV2</b>
+                            <a href="#betSlipV2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="myBetsTabVisibility"></a>
+                        <span class="name">
+                            <b>
+                            myBetsTabVisibility</b>
+                            <a href="#myBetsTabVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pickedItems"></a>
+                        <span class="name">
+                            <b>
+                            pickedItems</b>
+                            <a href="#pickedItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removePickFromCart"></a>
+                        <span class="name">
+                            <b>
+                            removePickFromCart</b>
+                            <a href="#removePickFromCart"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscriptionsService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            subscriptionsService</b>
+                            <a href="#subscriptionsService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/SubscriptionsService.html" target="_self" >SubscriptionsService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">apps/frontend/src/app/components/bet-column/bet-column.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {Subscription} from &quot;rxjs&quot;;
+import {SubscriptionsService} from &quot;../../shared/services/subscriptions/subscriptions.service&quot;;
+import {BetSlipService} from &quot;../../shared/services/bet-slip/bet-slip.service&quot;;
+
+@Component({
+  selector: &#x27;workspace-bet-column&#x27;,
+  templateUrl: &#x27;./bet-column.component.html&#x27;,
+  styleUrls: [&#x27;./bet-column.component.scss&#x27;]
+})
+export class BetColumnComponent implements OnInit {
+
+  addPickToCart: Subscription;
+  removePickFromCart: Subscription;
+  pickedItems: any;
+  betslipTabVisibility: boolean;
+  myBetsTabVisibility: boolean;
+  betSlipCartChanged: Subscription;
+
+  betSlipV2: object &#x3D; {};
+
+  constructor(public subscriptionsService: SubscriptionsService, private betSlipService: BetSlipService) {
+    this.betSlipV2 &#x3D; this.betSlipService.initNewBetSlip();
+    this.pickedItems &#x3D; this.betSlipV2;
+
+
+    this.betSlipCartChanged &#x3D; this.subscriptionsService.getBetSlipChanges().subscribe(data &#x3D;&gt; {
+      if (data) {
+        this.betSlipV2 &#x3D; this.betSlipService.initNewBetSlip();
+        this.pickedItems &#x3D; this.betSlipV2;
+      }
+    })
+    this.betslipTabVisibility &#x3D; true;
+    this.myBetsTabVisibility &#x3D; false;
+    this.addPickToCart &#x3D; this.subscriptionsService.getAddPickToCart().subscribe(data &#x3D;&gt; {
+      const cart &#x3D; JSON.parse(localStorage.getItem(&#x27;100BetCart&#x27;));
+      cart.push(data.pick)
+      this.pickedItems &#x3D; cart;
+      localStorage.setItem(&#x27;100BetCart&#x27;, JSON.stringify(cart));
+    })
+    this.removePickFromCart &#x3D; this.subscriptionsService.getRemovedFromCart().subscribe(data &#x3D;&gt; {
+      const cart &#x3D; JSON.parse(localStorage.getItem(&#x27;100BetCart&#x27;));
+      this.pickedItems &#x3D; cart.filter((e) &#x3D;&gt; {
+        return e.id !&#x3D;&#x3D; data
+      });
+      localStorage.setItem(&#x27;100BetCart&#x27;, JSON.stringify(this.pickedItems));
+    })
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  changeBetTab(tab, e) {
+    e.preventDefault();
+    if (tab &#x3D;&#x3D;&#x3D; &#x27;betslipTab&#x27;) {
+      this.betslipTabVisibility &#x3D; true;
+      this.myBetsTabVisibility &#x3D; false;
+    } else {
+      this.betslipTabVisibility &#x3D; false;
+      this.myBetsTabVisibility &#x3D; true;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bet__column&quot;&gt;
+  &lt;ul class&#x3D;&quot;bet__tab-bar&quot;&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; [ngClass]&#x3D;&quot;{&#x27;__is_active&#x27; : betslipTabVisibility}&quot; (click)&#x3D;&quot;changeBetTab(&#x27;betslipTab&#x27;, $event)&quot;&gt;Betslip&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; [ngClass]&#x3D;&quot;{&#x27;__is_active&#x27; : myBetsTabVisibility}&quot; (click)&#x3D;&quot;changeBetTab(&#x27;myBetsTab&#x27;, $event)&quot;&gt;My
+      Bets&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div class&#x3D;&quot;bet__column-wrapper&quot;&gt;
+    &lt;workspace-my-bets *ngIf&#x3D;&quot;myBetsTabVisibility&quot;&gt;&lt;/workspace-my-bets&gt;
+    &lt;workspace-bet-slip *ngIf&#x3D;&quot;betslipTabVisibility&quot; [pickedItems]&#x3D;&quot;pickedItems.picks&quot;&gt;&lt;/workspace-bet-slip&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./bet-column.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../mixins&quot;;
+
+.bet__column {
+  border-radius: var(--radius-base);
+  background: #292929;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  @include lower-than(&#x27;lg&#x27;){
+    display: none;
+  }
+  &amp;-wrapper {
+  }
+
+  .bet__tab-bar {
+    display: flex;
+    background: #404040;
+    border-top-left-radius: var(--radius-base);
+    border-top-right-radius: var(--radius-base);
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.16);
+    li {
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+
+      &amp;:first-child {
+        border-right: 1px solid #292929;
+      }
+
+      a {
+        display: block;
+        color: var(--plain-white);
+        font-family: var(--roboto-bold);
+        font-size: 1.286rem;
+        height: 47px;
+        line-height: 47px;
+        opacity: 0.33;
+        transition: opacity 0.3s ease;
+
+        &amp;.__is_active, &amp;:hover {
+          opacity: 1;
+          transition: opacity 0.3s ease;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="bet__column">  <ul class="bet__tab-bar">    <li><a href="#" [ngClass]="{\'__is_active\' : betslipTabVisibility}" (click)="changeBetTab(\'betslipTab\', $event)">Betslip</a>    </li>    <li><a href="#" [ngClass]="{\'__is_active\' : myBetsTabVisibility}" (click)="changeBetTab(\'myBetsTab\', $event)">My      Bets</a></li>  </ul>  <div class="bet__column-wrapper">    <workspace-my-bets *ngIf="myBetsTabVisibility"></workspace-my-bets>    <workspace-bet-slip *ngIf="betslipTabVisibility" [pickedItems]="pickedItems.picks"></workspace-bet-slip>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'workspace-root'},{'name': 'AsianHandicapComponent', 'selector': 'workspace-asian-handicap'},{'name': 'BetColumnComponent', 'selector': 'workspace-bet-column'},{'name': 'BetSlipComponent', 'selector': 'workspace-bet-slip'},{'name': 'BetSlipMultiComponent', 'selector': 'workspace-bet-slip-multi'},{'name': 'BetSlipSettingsComponent', 'selector': 'workspace-bet-slip-settings'},{'name': 'BetSlipSingleComponent', 'selector': 'workspace-bet-slip-single'},{'name': 'BetSlipSystemComponent', 'selector': 'workspace-bet-slip-system'},{'name': 'BreadcrumbsComponent', 'selector': 'workspace-breadcrumbs'},{'name': 'CarouselComponent', 'selector': 'workspace-carousel'},{'name': 'CarouselCounterComponent', 'selector': 'workspace-carousel-counter'},{'name': 'CasinoComponent', 'selector': 'workspace-casino'},{'name': 'CasinoGamesComponent', 'selector': 'workspace-casino-games'},{'name': 'FeaturedComponent', 'selector': 'workspace-featured'},{'name': 'FixturesMatchesComponent', 'selector': 'workspace-fixtures-matches'},{'name': 'FixturesOutrightsComponent', 'selector': 'workspace-fixtures-outrights'},{'name': 'FixturesPageComponent', 'selector': 'workspace-fixtures-page'},{'name': 'FixturesStandingsComponent', 'selector': 'workspace-fixtures-standings'},{'name': 'HomeComponent', 'selector': 'workspace-home'},{'name': 'InPlayBannerComponent', 'selector': 'workspace-in-play-banner'},{'name': 'InPlayComponent', 'selector': 'workspace-in-play'},{'name': 'InPlayPageComponent', 'selector': 'workspace-in-play-page'},{'name': 'LeftColumnNavComponent', 'selector': 'workspace-left-column-nav'},{'name': 'LiveEventComponent', 'selector': 'workspace-live-event'},{'name': 'MatchResultsComponent', 'selector': 'workspace-match-results'},{'name': 'MyBetsAllComponent', 'selector': 'workspace-my-bets-all'},{'name': 'MyBetsCashOutComponent', 'selector': 'workspace-my-bets-cash-out'},{'name': 'MyBetsComponent', 'selector': 'workspace-my-bets'},{'name': 'MyBetsLiveNowComponent', 'selector': 'workspace-my-bets-live-now'},{'name': 'MyBetsSettledComponent', 'selector': 'workspace-my-bets-settled'},{'name': 'MyBetsUnsettledComponent', 'selector': 'workspace-my-bets-unsettled'},{'name': 'NavigationComponent', 'selector': 'workspace-navigation'},{'name': 'OhbSelectComponent', 'selector': 'workspace-ohb-select'},{'name': 'PopularBetsComponent', 'selector': 'workspace-popular-bets'},{'name': 'SportsPageComponent', 'selector': 'workspace-sports-page'},{'name': 'StakeNumpadComponent', 'selector': 'workspace-stake-numpad'},{'name': 'TotalGoalsComponent', 'selector': 'workspace-total-goals'},{'name': 'UpcomingComponent', 'selector': 'workspace-upcoming'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BetColumnComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BetColumnComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

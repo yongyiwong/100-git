@@ -1,0 +1,82 @@
+<p-panel
+  [header]="paymentProviderChannel.paymentProvider.providerName + ' ' + paymentProviderChannel.providerChannelName + ' ' + paymentProviderChannel.channel.channelName "
+  #testDepositPanel>
+  <ng-template pTemplate="icons">
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-secondary p-button-text"
+      (click)="onClose($event)"></button>
+  </ng-template>
+  <div class="p-fluid " [ngClass]="{'loading_section': loading}">
+    <!-- <div class="p-field p-grid">
+      <div class="p-col-12 p-md-12">
+        <span class="p-float-label">
+          <p-inputNumber [useGrouping]="false" [(ngModel)]="userId" inputId="userIdInput"
+            (onInput)="onInputUserId($event)"></p-inputNumber>
+          <label for="userIdInput">UserID</label>
+        </span>
+        <small id="userId-help" [ngClass]="userIdHelperMsgClass" [innerText]="userIdHelperMsg"></small>
+      </div>
+    </div> -->
+    <div class="p-field p-grid">
+      <!-- <label for="amountInput" class="p-col-12 p-mb-2 p-md-4 p-mb-md-0">Amount</label> -->
+      <div class="p-col-12 p-md-12">
+        <span class="p-float-label">
+          <p-inputNumber [showButtons]="true" inputId="amountInput" mode="decimal" [min]="minAmount" [max]="maxAmount"
+            [minFractionDigits]="2" [maxFractionDigits]="2" [(ngModel)]="amount" (onInput)="onInputAmount($event)">
+          </p-inputNumber>
+          <label for="amountInput">Amount</label>
+        </span>
+        <small id="amountInput-help" [innerText]="amountHelperMsg" [ngClass]="amountHelperMsgClass"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <div class="p-col-12 p-md-6">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="userName" id="userName" />
+          <label for="userNameInput">UserName</label>
+        </span>
+        <small id="userName-help" [ngClass]="userNameHelperMsgClass" [innerText]="userNameHelperMsg"></small>
+      </div>
+      <div class="p-col-12 p-md-6">
+        <span class="p-float-label">
+          <input type="text" pInputText [(ngModel)]="phoneNumber" id="phoneNumberInput" />
+          <label for="phoneNumberInput">PhoneNumber</label>
+        </span>
+        <small id="phoneNumber-help" [ngClass]="phoneNumberHelperMsgClass" [innerText]="phoneNumberHelperMsg"></small>
+      </div>
+    </div>
+    <div class="p-field p-grid ">
+      <div class="p-col-12 p-md-12">
+        <p-dropdown [options]="paymentProviderBanks" [(ngModel)]="paymentProviderBank"
+          optionLabel="paymentProviderBankName" dataKey="id" [appendTo]="testDepositPanel"
+          inputId="providerBankDropdown" [disabled]="loadingPaymentProviderBanks" [autoDisplayFirst]="false"
+          (onChange)="onSelectPaymentProviderBank($event)">
+          <ng-template pTemplate="selectedItem">
+            <div *ngIf="paymentProviderBank">
+              <div>
+                {{paymentProviderBank.paymentProviderBankName}} ( {{paymentProviderBank.paymentProviderBankCode}} )
+              </div>
+            </div>
+          </ng-template>
+          <ng-template let-item pTemplate="item">
+            <div class="payment-provider-bank-item">
+              <span>{{item.paymentProviderBankName}}</span>
+              <span class="decent">{{'( '+item.paymentProviderBankCode+' )'}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <small id="providerChannelDropdown-help" [ngClass]="paymentProviderBankHelperMsgClass"
+          [innerText]="paymentProviderBankHelperMsg"></small>
+      </div>
+    </div>
+    <div class="loading-wrapper" [ngClass]="{'hide_it': !loading}">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <button pButton type="button" label="Submit" class="p-button-text" [disabled]="loading"
+      (click)="onSubmit($event)"></button>
+  </ng-template>
+  <p-confirmDialog [style]="{width: '50vw', 'font-size': '1.5rem'}" [baseZIndex]="10000"
+    rejectButtonStyleClass="p-button-text">
+  </p-confirmDialog>
+</p-panel>

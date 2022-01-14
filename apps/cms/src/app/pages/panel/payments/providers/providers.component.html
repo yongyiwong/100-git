@@ -1,0 +1,10 @@
+<nb-card [nbSpinner]="spinner">
+  <nb-card-header> Payment providers </nb-card-header>
+  <nb-card-body>
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="providersData"
+      (editConfirm)="onConfirmEdit($event)"
+    ></ng2-smart-table>
+  </nb-card-body>
+</nb-card>

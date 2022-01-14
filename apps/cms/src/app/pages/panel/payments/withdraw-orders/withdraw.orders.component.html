@@ -1,0 +1,114 @@
+<nb-card>
+  <!-- <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <p-button pTooltip="manual withdraw" tooltipPosition="top" label="Manual" icon="pi pi-plus" class="p-mr-2"
+        (click)="addManualOrder()">
+      </p-button>
+    </div>
+  </p-toolbar> -->
+  <p-table #dt [value]="withdrawOrders" styleClass="p-datatable-gridlines nb-card" [loading]="loading"
+    [scrollable]="false" scrollHeight="flex" [autoLayout]="true" [rowHover]="true" [paginator]="true" [rows]="10"
+    [(first)]="first" [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <div>
+          Withdraw Orders
+        </div>
+        <div>
+          <button pButton icon="pi pi-filter-slash" class="p-mr-2 p-button-outlined" (click)="clear(dt)"></button>
+          <p-button icon="pi pi-refresh" (click)="onRefresh()"></p-button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">
+          {{ col.header }}
+          <div *ngIf="col.field == 'orderId'"><span style="font-size: 0.8rem; color: #FA6;">Client OrderId</span></div>
+          <p-columnFilter *ngIf="col.field == 'userId'" type="text" field="userId" display="menu"></p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'date'" field="orderDate" display="menu" type="date"
+            [showMatchModes]="true" [showOperator]="false"></p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'amount'" type="numeric" field="amount" display="menu" class="p-ml-auto">
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'status'" field="status" matchMode="in" display="menu"
+            [showMatchModes]="false" [showOperator]="false" [showAddButton]="false" class="p-ml-auto">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Status Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="statuses" placeholder="Any" (onChange)="filter($event.value)"
+                optionLabel="name" optionValue="name">
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'paymentProviderId'" field="paymentProvider"
+            [matchMode]="'isPaymentProvider'" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+            <ng-template pTemplate="header">
+              <div class="p-px-3 p-pt-3 p-pb-0">
+                <span class="p-text-bold">Payment Provider Picker</span>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="paymentProviders" placeholder="Any"
+                (onChange)="filter($event.value)" optionLabel="providerName">
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-representative-option">
+                    <span class="p-ml-1">{{option.providerName}}</span>
+                  </div>
+                </ng-template>
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'orderId'" type="text" field='orderIds' display="menu"
+            [matchMode]="'isOrderId'" [showMatchModes]="false" [showOperator]="false">
+          </p-columnFilter>
+          <p-columnFilter *ngIf="col.field == 'providerOrderId'" type="numeric" field="providerOrderId" display="menu"
+            class="p-ml-auto">
+          </p-columnFilter>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+      <tr>
+        <td>{{order.userId}}</td>
+        <td>{{order.bankAccountName}}</td>
+        <td>{{formatDate(order.date)}}</td>
+        <td>{{order.amount}}</td>
+        <td>{{order.status}}</td>
+        <td>
+          <span style="white-space: nowrap;">{{order.orderId}}</span><br>
+          <span style="font-size: 0.8rem; color: #FA6;">{{order.clientOrderId}}</span>
+        </td>
+        <td>{{order.paymentProvider.providerName}}</td>
+        <td>{{order.providerOrderId}}</td>
+        <td>
+          <span style="white-space: nowrap;color: #FAA">{{order.errorCode}}</span><br>
+          <span style="font-size: 0.9rem; color: #F88">{{order.errorMessage}}</span>
+        </td>
+        <td>{{order.bankAccountNumber}}</td>
+        <td>{{order.branch}}</td>
+        <td>{{order.province}}</td>
+        <td>{{order.city}}</td>
+        <td>
+          <button pTooltip="make it success" tooltipPosition="top"
+            *ngIf="order.paymentProvider.isOnlyCardSupport && order.status == 'readyToPay'" pButton pRipple
+            icon="pi pi-check-circle" class="p-button-rounded p-button-info p-mr-2"
+            (click)="makeItSuccess(order)"></button>
+          <button pTooltip="manual widthraw" tooltipPosition="top" pButton pRipple icon="pi pi-plus"
+            class="p-button-rounded p-button-info p-mr-2" *ngIf="order.status == 'failed'"
+            (click)="addManualOrder(order)"></button>
+          <button pTooltip="copy bank info" tooltipPosition="top" pButton pRipple icon="pi pi-clone"
+            class="p-button-rounded p-button-info" (click)="copyBankInfoToClipboard(order)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-confirmDialog [style]="{width: '37vw', 'font-size': '1.2rem', lineHeight: '1.7em'}" [baseZIndex]="10000"
+    rejectButtonStyleClass="p-button-text">
+  </p-confirmDialog>
+</nb-card>

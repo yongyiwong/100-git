@@ -1,0 +1,51 @@
+<nb-card>
+  <p-table #dt [value]="options" styleClass="p-datatable-gridlines nb-card" [loading]="loading" [scrollable]="false"
+    scrollHeight="flex" [autoLayout]="false" [rowHover]="true" [paginator]="true" [rows]="10" [(first)]="first"
+    [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[10, 25, 50]" (onEditComplete)="onEditComplete($event)">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <div class="p-d-flex p-ai-center">
+          Options
+          <p-button label="Save" class="p-mr-2 p-ml-5" icon="pi pi-save" [disabled]="loading" (onClick)="onClickSave()">
+          </p-button>
+        </div>
+        <div>
+          <p-button icon="pi pi-refresh" (click)="onRefresh()"></p-button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of cols" [ngStyle]="{'width': col.width ? col.width: '' }">
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">
+          {{ col.header }}
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-option>
+      <tr>
+        <td>{{option.optName}}</td>
+        <td [pEditableColumn]="option">
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <p-inputNumber *ngIf="option.type === 'number'" [(ngModel)]="option.optValue" required
+                [useGrouping]="false">
+              </p-inputNumber>
+              <input *ngIf="option.type !== 'number'" type="text" pInputText [(ngModel)]="option.optValue" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{option.optValue}}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+        <td></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</nb-card>

@@ -1,0 +1,8 @@
+upload to s3:
+  image:
+    name: banst/awscli
+    entrypoint: [""]
+  script:
+    - aws configure set region ap-northeast-1
+    - touch foo.txt
+    - aws s3 cp foo.txt s3://$S3_BUCKET/foo.txt

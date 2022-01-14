@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "commonJS",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/interfaces": ["libs/interfaces/src/index.ts"],
+      "@workspace/enums": ["libs/enums/src/index.ts"],
+      "@workspace/jwt": ["libs/jwt/src/index.ts"],
+      "@workspace/dto": ["libs/dto/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

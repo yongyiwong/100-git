@@ -1,0 +1,28 @@
+// :host ::ng-deep {
+//   .p-datatable-scrollable-body {
+//     $size: 7px;
+//     $border-radius: 2px;
+//     $fg: #24a;
+//     $bg: #56a;
+
+//     &::-webkit-scrollbar {
+//       width: $size;
+//       height: $size;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//       background: $fg;
+//       cursor: pointer;
+//       border-radius: $border-radius;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       background: $bg;
+//     }
+
+//     // TODO: remove
+//     // For Internet Explorer
+//     scrollbar-face-color: $fg;
+//     scrollbar-track-color: $bg;
+//   }
+// }

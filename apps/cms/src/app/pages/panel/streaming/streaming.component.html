@@ -1,0 +1,12 @@
+<nb-card *ngIf="settings" [nbSpinner]="spinner">
+  <nb-card-header> Streams </nb-card-header>
+
+  <nb-card-body nbSpinnerStatus="basic" class="steam-card-body">
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="data"
+      (editConfirm)="onConfirmEdit($event)"
+    >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
