@@ -4,7 +4,6 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
     "deploy:local": "npm run build && cp ./package.json ./dist/apps/backend/package.json && sequelize db:migrate && sequelize db:seed:all && node ./dist/apps/backend/main.js",
     "deploy": "node ./dist/apps/backend/main",
@@ -93,7 +92,6 @@
     "moment-timezone": "^0.5.32",
     "nebular-icons": "1.1.0",
     "nest-winston": "^1.4.0",
-    "ng-recaptcha": "file:./apps/frontend/src/assets/dev/captcha/ng-recaptcha",
     "ng2-completer": "^9.0.1",
     "ng2-smart-table": "^1.7.2",
     "ng4-click-outside": "^1.0.1",
